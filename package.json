@@ -1,0 +1,23 @@
+{
+  "name": "game",
+  "version": "1.0.0",
+  "description": "Word Games",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NereidaRondon/Game.git"
+  },
+  "author": "Nereida Rondon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NereidaRondon/Game/issues"
+  },
+  "homepage": "https://github.com/NereidaRondon/Game#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "jquery": "^3.6.0"
+  }
+}
