@@ -1,0 +1,23 @@
+body{
+  background-color: rgb(60, 60, 60);
+}
+.container{
+  background-color: rgb(236, 255, 126);
+  margin: 5rem auto;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  max-width: fit-content;
+}
+.guess-box{
+  display:flex;
+  margin: auto;
+  justify-content: center;
+}
+
+input {
+  width: 2rem;
+  height: 2rem;
+  font-size: 30px;
+  text-align: center;
+  background: lightslategray;
+}

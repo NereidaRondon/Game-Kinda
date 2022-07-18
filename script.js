@@ -5,4 +5,18 @@ wordBank=['abhor', 'above', 'acute', 'agent', 'alarm', 'alone', 'angle', 'arena'
 let player = prompt('Enter your name: ');
 alert(`Hi ${player}, welcome to my version of wordle!`);
 
+$('input').on("input", function(){
+    let $this = $(this);
+    if ($this.val().length === parseInt($this.attr("maxlength"), 10)){
+        let nextInput = $this.nextAll("input[value=''], input:not([value])")[0];
+        if (nextInput){
+            nextInput.focus();
+        }    
+    }
+});
+
+
+
 function
+
+document.addEventListener('click', onclick, true);
