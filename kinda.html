@@ -32,7 +32,7 @@
                     </div>
 
                     <div class="modal-body">
-                        <h4>🔥 Congratulations <span id="userName"></span> 🔥</h4>
+                        <h4>🔥 Congratulations <span id="player"></span> 🔥</h4>
 
                         <h4>You made it all 10 rounds!</h4>
 
@@ -92,20 +92,18 @@
     <!------------------INPUT BOXES-------------------------->
 
         <div class="guess-box">
-            <form>
-                <input class="input one" id="input1" type="text" name="textbox1" maxlength="1" required/>
-                <input class="input two" id="input2" type="text" name="textbox2" maxlength="1" required/>
-                <input class="input three" id="input3" type="text" name="textbox3" maxlength="1" required/>
-                <input class="input four" id="input4" type="text" name="textbox4" maxlength="1" required/>
-                <input class="input five" id="input5" type="text" name="textbox5" maxlength="1" required/>
+            
+                <input class="input one" id="input1" type="text" name="textbox1" maxlength="1"/>
+                <input class="input two" id="input2" type="text" name="textbox2" maxlength="1"/>
+                <input class="input three" id="input3" type="text" name="textbox3" maxlength="1"/>
+                <input class="input four" id="input4" type="text" name="textbox4" maxlength="1"/>
+                <input class="input five" id="input5" type="text" name="textbox5" maxlength="1"/>
 
-                
-                <button class="btn" type="submit" id="submitBtn" onclick="newGame.submit()" disabled>SUBMIT</button>
-            </form>   
         </div>
-
-    <!----------------------BUTTONS------------------------>
-
+        
+        <!----------------------BUTTONS------------------------>
+        
+        <button class="btn" type="submit" id="submitBtn" onclick="newGame.submit()" disabled>SUBMIT</button>
         
         <button class="btn" type="button" id="clearBtn" onclick="newGame.clear()" disabled>CLEAR</button>
         

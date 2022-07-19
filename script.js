@@ -1,6 +1,6 @@
 
-// let player = alert('Enter your name: ');
-// alert(`Hi ${player}, welcome to my version of wordle!`);
+let player = prompt('Enter your name: ');
+alert(`Hi ${player}, welcome to my version of wordle!`);
 
 // const wordBank=['abhor', 'above', 'acute', 'agent', 'alarm', 'alone', 'angle', 'arena', 'avoid', 'basic', 'beach', 'below', 'birth', 'block', 'brain', 'break', 'brief', 'build', 'cable', 'chart', 'check', 'class', 'clean', 'coast', 'coach', 'color', 'cough', 'crash', 'crime', 'curve', 'dance', 'debut', 'dodger', 'drama', 'dream', 'drive', 'eager', 'earth', 'eject', 'empty', 'equal', 'error', 'event', 'exact', 'exist', 'false', 'field', 'fight', 'final', 'flash', 'fleet', 'force', 'frame', 'front', 'fudge', 'funny', 'giant', 'glass', 'grace', 'grade', 'grant', 'grass', 'group', 'guest', 'guide', 'happy', 'haste', 'heart', 'heavy', 'house', 'human', 'image', 'index', 'input', 'jaded', 'joint', 'judge', 'karma', 'kayak', 'kiosk', 'label', 'laser', 'later', 'laugh', 'learn', 'leave', 'level', 'limit', 'logic', 'lucky', 'lunch', 'magic', 'match', 'media', 'model', 'money', 'month', 'motor', 'movie', 'music', 'never', 'night', 'noise', 'novel', 'ocean', 'order', 'other', 'paint', 'panic', 'paper', 'party', 'peace', 'phase', 'phone', 'pilot', 'plane', 'plant', 'point', 'power', 'prime', 'proud', 'prove', 'queen', 'quiet', 'radio', 'range', 'rapid', 'ratio', 'react', 'ready', 'rival', 'river', 'rough', 'round', 'route', 'royal', 'scope', 'score', 'shape', 'sheet', 'shift' , 'short', 'sight', 'skill', 'small', 'smart', 'smile', 'solid', 'sound', 'space', 'speak', 'sport', 'start', 'steam', 'stock', 'storm', 'story', 'study', 'style', 'super', 'sweet', 'table', 'taste', 'teach', 'teeth', 'theme', 'think', 'tight', 'title', 'topic', 'tough', 'tower', 'trust', 'under', 'union', 'urban', 'valid', 'vapid', 'venom', 'video', 'virus', 'visit', 'voice', 'waste', 'watch', 'water', 'wheel', 'where', 'whole', 'woman', 'world', 'worry', 'worth', 'write', 'wrong', 'yield', 'young', 'youth', 'zesty', 'zombi'];
 
@@ -78,11 +78,12 @@ class Game {
         let four=document.getElementById("input4").value;
         let five=document.getElementById("input5").value;
         
+
         // Take user input, concatenate to create a string
-        let userWord = one+two+three+four+five;
+        let userWord = (one+two+three+four+five).toLowerCase();
         
         function containsNumber(str) {
-        return /[0-9]/.test(str);
+            return /[0-9]/.test(str);
         }
         console.log(`Contains num? ${containsNumber(userWord)}`); 
 
@@ -90,15 +91,54 @@ class Game {
         console.log(`This Word: ${this.word}`);
         
         
-     
-        //Checks user's input to make sure no numbers are present
-        if (containsNumber(userWord)){
+
+
+        if (document.querySelector(".one").value == ""){            
+            
+            alert('Please fill in each box and try again');
+            
+            document.getElementById('submitBtn').removeAttribute('disabled', '');
+            document.getElementById('clearBtn').removeAttribute('disabled', '');
+
+        } else if (document.querySelector(".two").value == ""){            
+            
+            alert('Please fill in each box and try again');
+            
+            document.getElementById('submitBtn').removeAttribute('disabled', '');
+            document.getElementById('clearBtn').removeAttribute('disabled', '');            
+        
+        
+        } else if (document.querySelector(".three").value == ""){            
+            
+            alert('Please fill in each box and try again');
+            
+            document.getElementById('submitBtn').removeAttribute('disabled', '');
+            document.getElementById('clearBtn').removeAttribute('disabled', '');            
+            
+        
+        } else if (document.querySelector(".four").value == ""){            
+            
+            alert('Please fill in each box and try again');
+            
+            document.getElementById('submitBtn').removeAttribute('disabled', '');
+            document.getElementById('clearBtn').removeAttribute('disabled', '');            
+        
+        
+        } else if (document.querySelector(".five").value == ""){            
+            
+            alert('Please fill in each box and try again');
+            
+            document.getElementById('submitBtn').removeAttribute('disabled', '');
+            document.getElementById('clearBtn').removeAttribute('disabled', '');            
+
+        
+        } else if (containsNumber(userWord)){
+
             alert('Not a word, please try again');
             
             document.getElementById('submitBtn').removeAttribute('disabled', '');
             document.getElementById('clearBtn').removeAttribute('disabled', '');
-            document.getElementById('closeBtn').removeAttribute('hidden', '');    
-
+                
         } else if (userWord === this.word && this.round===10){
                 
             this.points+=10;
@@ -109,6 +149,7 @@ class Game {
             //disable or enable buttons as needed
             document.getElementById('submitBtn').setAttribute('disabled', '');
             document.getElementById('clearBtn').setAttribute('disabled', '');
+            //enable this next round button
             document.getElementById('nextBtn').removeAttribute('disabled', '');
 
             //Words match finished game
@@ -123,6 +164,7 @@ class Game {
             document.getElementById('submitBtn').setAttribute('disabled', '');
             document.getElementById('clearBtn').setAttribute('disabled', '');
             document.getElementById('nextBtn').setAttribute('disabled', '');
+            //enable close window button
             document.getElementById('closeBtn').removeAttribute('hidden', '');
 
             newGame.endGame();
@@ -138,6 +180,7 @@ class Game {
             //disable or enable buttons as needed
             document.getElementById('submitBtn').setAttribute('disabled', '');
             document.getElementById('clearBtn').setAttribute('disabled', '');
+            //enable next round button
             document.getElementById('nextBtn').removeAttribute('disabled', '');
 
 
@@ -148,7 +191,7 @@ class Game {
             //nextBtn should already be disabled by default           
             let letterMatch=(user, word)=>{
                 for(let i=0; i < 5; i++){
-                    if(user[i]!==word[i]){      
+                    if(user[i].toLowerCase()!==word[i]){      
                         let indexId=`input${(i)+1}`;
                         let clearInput = (elementId)=>{
                                 document.getElementById(elementId).value="";
@@ -219,6 +262,8 @@ class Game {
 
     endGame(){
         $('#endGame').modal('show');
+
+        document.querySelector('#player').innerHTML=`${player}`;
 
         newGame.reset();
         this.round=0;
