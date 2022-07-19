@@ -7,33 +7,118 @@
     <title>Kinda</title>
     <link rel="stylesheet" href="styles.css">
 
-  </head>
-  <body>
-      <div class="container">
-        <h1>Kinda, the word game</h1>
-            <h2>(Because it's kinda like Wordle.)</h2>
-            <br />
-            <h2>Game Rules:</h2>
-                <ol>
-                    <li>Guess a 5 letter word</li>
-                    <li>You will get 5 guesses per round</li>
-                    <li>There are 200 different words, from A to Zesty</li>
-                    <li>If your word is not a match, then you try again until you're out of guesses</li>
-                    <li>Even if your word doesn't match, letters in your word may match and remain in place</li>
-                    <li>No plural 4 letter words here</li>
-                    <li>The words won't be an animal or a fruit</li>
-                </ol>
-      </div>
+    <link rel="stylesheet"     href="node_modules/bootstrap/dist/css/bootstrap.css"/>
 
-        <div class="guess-box">
-            <input class="input one" type="text" name="textbox1" maxlength="1" autofocus/>
-            <input class="input two" type="text" name="textbox2" maxlength="1" autofocus/>
-            <input class="input three" type="text" name="textbox3" maxlength="1"/>
-            <input class="input four" type="text" name="textbox4" maxlength="1"/>
-            <input class="input five" type="text" name="textbox5" maxlength="1"/>   
+  </head>
+  <body class="bg">
+      <div class="container">
+        
+        <a href="index.html"><button type="button" class="btn-close" id="closeBtn" aria-label="Close" hidden="hidden"></button></a> 
+        
+    <!-------------------- MODAL ----------------------->
+        <div id="endGame" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            
+                <div class="modal-content">
+              
+                    <div class="modal-header">
+                
+                        <h3 class="modal-title">Kinda Finished!</h3>
+                    
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <h4>🔥 Congratulations <span id="userName"></span> 🔥</h4>
+
+                        <h4>You made it all 10 rounds!</h4>
+
+                        <h1>🏆 100 points</h1>
+                    </div>
+                    <div class="modal-footer">
+                        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                        <a href="index.html"><button type="button" class="btn btn-secondary" data-dismiss="modal">Exit</button></a>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
+    <!--------------------------------------------------->
+        <h1>Kinda</h1><br>
+        <h2>The word game</h2>
+            <p>(Because it's kinda like Wordle.)</p>
+            <br />
+            <h3>Game Rules:</h3>
+                <ol>
+                    <li>Guess a 5 letter word</li>
+                    <li>You will get 5 additional guesses per round</li>
+                    <li>There are 200 different words, from A to Zesty</li>
+                    <li>If your word is not a match, then you try again until you're out of guesses</li>
+                    <li>Even if your word doesn't match, letters from your guess that match the letters in the mystery word <strong>AND</strong> are in the correct spot will remain in place</li>
 
+                </ol>
+            <h5>Hints:</h5>
+            <ul>
+                <li>No plural, 4 letter words here<br>
+                    <small>for example: cats, words, lists</small>
+                </li>
+                <li>The words won't be an animal or a fruit</li>
+            </ul>   
+            
+            
+            <button class="btn" type="button" id="startBtn" onclick="newGame.start()">START</button>
+      </div>
+
+
+    <!-------------------SCOREBOARD------------------------>
+        <div class="info-box">
+            <div class="round" id="round">ROUND: 0</div>
+            
+            <div class="points" id="points">POINTS: 0</div>
+          
+            <div class="chances" id="chances">CHANCES: 0</div>
+        </div>
+
+    <!------------------------------------------------------>
+        
+    <!----------------- ALERT   class="message alert alert-secondary" ------------------>
+        
+        <div class="message" role="alert" id="message"></div>
+
+    <!------------------INPUT BOXES-------------------------->
+
+        <div class="guess-box">
+            <form>
+                <input class="input one" id="input1" type="text" name="textbox1" maxlength="1" required/>
+                <input class="input two" id="input2" type="text" name="textbox2" maxlength="1" required/>
+                <input class="input three" id="input3" type="text" name="textbox3" maxlength="1" required/>
+                <input class="input four" id="input4" type="text" name="textbox4" maxlength="1" required/>
+                <input class="input five" id="input5" type="text" name="textbox5" maxlength="1" required/>
+
+                
+                <button class="btn" type="submit" id="submitBtn" onclick="newGame.submit()" disabled>SUBMIT</button>
+            </form>   
+        </div>
+
+    <!----------------------BUTTONS------------------------>
+
+        
+        <button class="btn" type="button" id="clearBtn" onclick="newGame.clear()" disabled>CLEAR</button>
+        
+        <button class="btn" type="button" id="nextBtn" onclick="newGame.reset()" disabled>NEXT ROUND</button>
+
+    <!------------------------------------------------------>  
+
+    <script src="script.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+        <footer>
+            <span>&copy;<script>document.write(new Date().getFullYear()); </script> Nereida Rondon</span>
+        </footer>
   </body>
 </html>
