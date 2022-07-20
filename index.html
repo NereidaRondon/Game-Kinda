@@ -11,6 +11,7 @@
     <title>Kinda Wordle</title>
 
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="styles.css"/>
     <link rel="stylesheet" href="homestyles.css"/>
 
 
@@ -25,66 +26,33 @@
   </head>
   <!-- <body class="dark mode"> -->
   <body> 
-    <!-- As a link -->
+
+
+    <!------------------NAV icon As a link ----------------->
     <div>
         <nav class="container navbar navbar-light bg-light">
             <a class="navbar-brand" href="index.html"><img src="images\Kinda.webp" width="250"></a>
-            
-
         </nav>
-        <div ><h1>The word game</h1>
-            <p>(Because it's kinda like Wordle.)</p>
-        </div>
-    
     </div>
+    <div><p>(Because it's kinda like Wordle.)</p></div>
         
-    
+    <!-----------------COLLAPSEABLE NAVBAR------------------->
     <div class="pos-f-t">
-  <div class="collapse" id="navbarToggleExternalContent">
-    <div class="bg-dark p-4">
-      <h4 class="text-white">Collapsed content</h4>
-      <span class="text-muted">Toggleable via the navbar brand.</span>
-    </div>
-  </div>
-  <nav class="navbar navbar-dark bg-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </nav>
-</div>
-
-
-
-   <div>
-        <nav class="container navbar navbar-dark bg-dark">
-        <!-- Navbar content -->
-        </nav>
-   </div>
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-dark p-4">
+                <h4 class="text-white">Collapsed content</h4>
+                <span class="text-muted">Toggleable via the navbar brand.</span>
+            </div>
+        </div>
     
-
-    <div class="container">
-        
-
-        <div class="row">
-            <h3>Game Rules:</h3>
-           
-            <div class="col-sm"><p>Guess a 5 letter word</p></div>
-            <div class="col-sm"><p>You will get 5 additional guesses per round</p></div>
-            <div class="col-sm"><p>Even if your word doesn't match, letters from your guess that match the letters in the mystery word <strong>AND</strong> are in the correct spot will remain in place</p></div>
-      
-        </div>
-
-        <div class="row">
-            <h3>Hints:</h3>
-            <div class="col-sm"><p>There are 200 different words, from A to Zesty</p></div>
-            <div class="col-sm"><p>No plural, 4 letter words here<br>
-                    <small>for example: cats, words, lists</small></div>
-            <div class="col-sm"><p>The words won't be an animal or a fruit</p>
-            </ul> </div>
-        </div>
-      
-        <div>
-            <form onsubmit="greetPlayer()">
+        <nav class="navbar navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+    </div>
+    <!---------------------FORM------------------------------->
+            <form onsubmit="savePlayer()">
                 <h3>Before you start, introduce yourself:</h3>
                 <div class="form-group">
                     <label for="player">Player</label>
@@ -92,8 +60,7 @@
                 </div>
                 
                 <!-- DROPDOWN -->
-                
-                    <div class="btn-group">
+<!--                <div class="btn-group">
                         <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">How good of a word guesser are you?
                         </button>
     
@@ -102,30 +69,25 @@
                             <button class="dropdown-item" type="button">Pretty average guesser</button>
                             <button class="dropdown-item" type="button">It's my super power</button>
                         </div>
-                    </div>
+                    </div> -->
 
                 <!-- DARK MODE TOGGLE -->
-
                 <div class="form-group form-check">
                     <input  class="form-check-input" type="checkbox" id="exampleCheck1" value="darkModeOn">
                     <label class="form-check-label" for="exampleCheck1">&ensp;dark mode on</label>
                     
-                
                 </div>
                 <br>
                 <br>
                 <button type="submit" class="btn btn-primary">Submit</button>
-                
-
-
             </form>
         </div>
 
 
 
-        <!----------HIDDEN START GAME BUTTON------------->
+        <!---------- START GAME BUTTON------------->
         <div>
-            <a href="kinda.html"><button class="btn" type="button" id="startBtn" onclick="newGame.start()">START GAME</button></a>
+            <a href="kinda-game.html"><button class="btn" type="button" id="startBtn">PLAY</button></a>
         </div>
 
       
@@ -136,10 +98,7 @@
 
 
     <script src="script.js"></script>
-
     <script src="node_modules\jquery\dist\jquery.js"></script>
-
-
     <script src="node_modules\bootstrap\dist\js\bootstrap.bundle.js"></script>
 
         <footer>

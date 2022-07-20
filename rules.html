@@ -17,7 +17,7 @@
 
   </head>
   <!-- <body class="dark mode"> -->
-  <body> 
+  <body class="bg"> 
     
 
 
@@ -29,7 +29,7 @@
         <div class="row">
             <h3>Game Rules:</h3>
            
-            <div class="col-sm"><p>Guess a 5 letter word</p></div>
+            <div class="col-sm"><p>Guess a 5 letter word, then submit to check if you guessed correctly</p></div>
             <div class="col-sm"><p>You will get 5 additional guesses per round</p></div>
             <div class="col-sm"><p>Even if your word doesn't match, letters from your guess that match the letters in the mystery word <strong>AND</strong> are in the correct spot will remain in place</p></div>
       
@@ -44,54 +44,7 @@
             </ul> </div>
         </div>
       
-        <div>
-            <form onsubmit="greetPlayer()">
-                <h3>Before you start, introduce yourself:</h3>
-                <div class="form-group">
-                    <label for="player">Player</label>
-                    <input type="text" class="form-control" id="player" placeholder="your name" required>
-                </div>
-                
-                <!-- DROPDOWN -->
-                
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">How good of a word guesser are you?
-                        </button>
-    
-                        <div class="dropdown-menu dropdown-menu-lg-right">
-                            <button class="dropdown-item" type="button">No luck with guessing</button>
-                            <button class="dropdown-item" type="button">Pretty average guesser</button>
-                            <button class="dropdown-item" type="button">It's my super power</button>
-                        </div>
-                    </div>
-
-                <!-- DARK MODE TOGGLE -->
-
-                <div class="form-group form-check">
-                    <input  class="form-check-input" type="checkbox" id="exampleCheck1" value="darkModeOn">
-                    <label class="form-check-label" for="exampleCheck1">&ensp;dark mode on</label>
-                    
-                
-                </div>
-                <br>
-                <br>
-                <button type="submit" class="btn btn-primary">Submit</button>
-                
-
-
-            </form>
-        </div>
-
-
-
-        <!----------HIDDEN START GAME BUTTON------------->
-        <div>
-            <a href="kinda.html"><button class="btn" type="button" id="startBtn" onclick="newGame.start()">START GAME</button></a>
-        </div>
-
-      
-    
-    </div>
+    </div>    
 
 
 
