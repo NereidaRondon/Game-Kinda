@@ -1,6 +1,34 @@
+// Store Player Name
+function greetPlayer(){
+        let player = document.getElementById('player').value;
+        sessionStorage.setItem('playerName', player);
+    }
+    
+    
+let player = sessionStorage.getItem('playerName');
+    
+console.log(player);
 
-let player = prompt('Enter your name: ');
-alert(`Hi ${player}, welcome to my version of wordle!`);
+
+    //dark mode checkbox toggle
+let toggle =document.getElementById("mode");
+
+// toggle.addEventListener('click', ()=>{
+//     document.body.classList.toggle('dark');
+// })
+
+
+// let showStartBtn=()=>{ document.getElementById('startBtn').removeAttribute('disabled', '');};
+
+function showStartBtn(){
+    document.getElementById('startBtn').removeAttribute('hidden', '');
+};
+
+// -------------------------------------
+
+
+// let player = ('Enter your name: ');
+// (`Hi ${player}, welcome to my version of wordle!`);
 
 // const wordBank=['abhor', 'above', 'acute', 'agent', 'alarm', 'alone', 'angle', 'arena', 'avoid', 'basic', 'beach', 'below', 'birth', 'block', 'brain', 'break', 'brief', 'build', 'cable', 'chart', 'check', 'class', 'clean', 'coast', 'coach', 'color', 'cough', 'crash', 'crime', 'curve', 'dance', 'debut', 'dodger', 'drama', 'dream', 'drive', 'eager', 'earth', 'eject', 'empty', 'equal', 'error', 'event', 'exact', 'exist', 'false', 'field', 'fight', 'final', 'flash', 'fleet', 'force', 'frame', 'front', 'fudge', 'funny', 'giant', 'glass', 'grace', 'grade', 'grant', 'grass', 'group', 'guest', 'guide', 'happy', 'haste', 'heart', 'heavy', 'house', 'human', 'image', 'index', 'input', 'jaded', 'joint', 'judge', 'karma', 'kayak', 'kiosk', 'label', 'laser', 'later', 'laugh', 'learn', 'leave', 'level', 'limit', 'logic', 'lucky', 'lunch', 'magic', 'match', 'media', 'model', 'money', 'month', 'motor', 'movie', 'music', 'never', 'night', 'noise', 'novel', 'ocean', 'order', 'other', 'paint', 'panic', 'paper', 'party', 'peace', 'phase', 'phone', 'pilot', 'plane', 'plant', 'point', 'power', 'prime', 'proud', 'prove', 'queen', 'quiet', 'radio', 'range', 'rapid', 'ratio', 'react', 'ready', 'rival', 'river', 'rough', 'round', 'route', 'royal', 'scope', 'score', 'shape', 'sheet', 'shift' , 'short', 'sight', 'skill', 'small', 'smart', 'smile', 'solid', 'sound', 'space', 'speak', 'sport', 'start', 'steam', 'stock', 'storm', 'story', 'study', 'style', 'super', 'sweet', 'table', 'taste', 'teach', 'teeth', 'theme', 'think', 'tight', 'title', 'topic', 'tough', 'tower', 'trust', 'under', 'union', 'urban', 'valid', 'vapid', 'venom', 'video', 'virus', 'visit', 'voice', 'waste', 'watch', 'water', 'wheel', 'where', 'whole', 'woman', 'world', 'worry', 'worth', 'write', 'wrong', 'yield', 'young', 'youth', 'zesty', 'zombi'];
 
@@ -302,71 +330,3 @@ let newGame = new Game;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// class NextRound extends Game{
-//     constructor(){
-//         super();
-        
-//     }
-    
-    
-//     resetRound(){
-//         this.round += 1;
-
-
-//         document.getElementById('round').innerHTML=`ROUND: ${this.round}`;
-//         document.getElementById('points').innerHTML=`POINTS: ${this.points}`;
-//         document.getElementById('chances').innerHTML=`CHANCES: ${this.chances}`;
-
-
-//         super.score();
-//         console.log(super.score());
-
-
-//         console.log(`Points2# ${this.points}`);
-//         console.log(`Round2# ${this.round}`);
-//         console.log(`Chances2# ${this.chances}`);
-
-//         document.getElementById('submitBtn').removeAttribute('disabled', '');
-//         document.getElementById('clearBtn').removeAttribute('disabled', '');
-//         document.getElementById('nextBtn').setAttribute('disabled', '');
-        
-//         document.querySelector("#message").innerHTML='';
-        
-//         document.querySelector('#input1').value='';
-//         document.querySelector('#input2').value='';
-//         document.querySelector('#input3').value='';
-//         document.querySelector('#input4').value='';
-//         document.querySelector('#input5').value='';
-        
-
-//         let nextWord = this.round - 1;
-//         console.log(`The next word: ${gameList[nextWord]}`);
-        
-//         console.log(`Points3# ${this.points}`);
-//         console.log(`Round3# ${this.round}`);
-//         console.log(`Chances3# ${this.chances}`);
-//         //reset chances back to 6
-//         // replace("chances", this.chances);
-
-
-//     }
-// }

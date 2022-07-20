@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Play a word game kinda like Wordle, named KINDA"/>
+    <meta name="author" content="Nereida Rondon">
+    <meta name="keywords" content="Word game, HTML, CSS, JavaScript, Bootsrtap, Nereida Rondon">
+      
     <title>Kinda</title>
     <link rel="stylesheet" href="styles.css">
 
@@ -12,7 +16,7 @@
   </head>
   <body class="bg">
       <div class="container">
-        
+    <!-----------------CLOSE BUTTON--------------------->    
         <a href="index.html"><button type="button" class="btn-close" id="closeBtn" aria-label="Close" hidden="hidden"></button></a> 
         
     <!-------------------- MODAL ----------------------->
@@ -32,7 +36,7 @@
                     </div>
 
                     <div class="modal-body">
-                        <h4>🔥 Congratulations <span id="player"></span> 🔥</h4>
+                        <h1>🔥 Congratulations <span id="player"></span> 🔥</h1>
 
                         <h4>You made it all 10 rounds!</h4>
 
@@ -50,29 +54,7 @@
     <!--------------------------------------------------->
         <h1>Kinda</h1><br>
         <h2>The word game</h2>
-            <p>(Because it's kinda like Wordle.)</p>
-            <br />
-            <h3>Game Rules:</h3>
-                <ol>
-                    <li>Guess a 5 letter word</li>
-                    <li>You will get 5 additional guesses per round</li>
-                    <li>There are 200 different words, from A to Zesty</li>
-                    <li>If your word is not a match, then you try again until you're out of guesses</li>
-                    <li>Even if your word doesn't match, letters from your guess that match the letters in the mystery word <strong>AND</strong> are in the correct spot will remain in place</li>
-
-                </ol>
-            <h5>Hints:</h5>
-            <ul>
-                <li>No plural, 4 letter words here<br>
-                    <small>for example: cats, words, lists</small>
-                </li>
-                <li>The words won't be an animal or a fruit</li>
-            </ul>   
-            
-            
-            <button class="btn" type="button" id="startBtn" onclick="newGame.start()">START</button>
-      </div>
-
+              
 
     <!-------------------SCOREBOARD------------------------>
         <div class="info-box">
