@@ -7,22 +7,34 @@
     <meta name="author" content="Nereida Rondon">
     
 
+    
     <title>Kinda Wordle Player List</title>
 
     <link rel="stylesheet" href="styles.css">
 
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"/>
-    <link rel="stylesheet" href="homestyles.css"/>
+    
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Rampart+One&display=swap" rel="stylesheet">
 
+
 </head>
-<body class="table-body">
+<body class="bg">
+
+<!------------------NAV icon As a link ----------------->
+
+    <nav class="nav-icon container navbar navbar-light">
+        <a class="navbar-brand" href="index.html"><img src="images\Kinda.webp" width="250" height="100" alt="Kinda word Game logo"></a>
+    </nav>
+ 
+
+<!------------------------------------------------------>
+
 <div class="table-container">
     
-    <h1 class="table-text">Kinda Top 10 Players</h1>
+    <h1 class="table-label"><img src="images\top10.webp" width="150" height="50" alt="Top 10 Players list"></h1>
         
     <table class="table table-hover">
     <thead>
@@ -109,15 +121,12 @@
 
 </div>
 
-        <footer>
-            <span>&copy;<script>document.write(new Date().getFullYear()); </script> Nereida Rondon</span>
-        </footer>
+    <footer>
+        <span>&copy;<script>document.write(new Date().getFullYear()); </script> Nereida Rondon</span>
+    </footer>
 
     <script src="script.js"></script>
-
     <script src="node_modules\jquery\dist\jquery.js"></script>
-
-
     <script src="node_modules\bootstrap\dist\js\bootstrap.bundle.js"></script>
 </body>
 </html>

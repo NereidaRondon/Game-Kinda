@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <link>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,37 +21,44 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 
-
-
   </head>
   <!-- <body class="dark mode"> -->
-  <body> 
+  <body class="bg"> 
 
 
     <!------------------NAV icon As a link ----------------->
     <div>
-        <nav class="container navbar navbar-light bg-light">
-            <a class="navbar-brand" href="index.html"><img src="images\Kinda.webp" width="250"></a>
+        <nav class="container navbar navbar-light">
+            <a class="navbar-brand" href="index.html"><img src="images\Kinda.webp" width="250" height="100" alt="Kinda word Game logo"></a>
         </nav>
     </div>
-    <div><p>(Because it's kinda like Wordle.)</p></div>
+    <br>
         
     <!-----------------COLLAPSEABLE NAVBAR------------------->
-    <div class="pos-f-t">
-        <div class="collapse" id="navbarToggleExternalContent">
-            <div class="bg-dark p-4">
-                <h4 class="text-white">Collapsed content</h4>
-                <span class="text-muted">Toggleable via the navbar brand.</span>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        
+        <a class="navbar-brand" href="#">Menu</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+
+                <a class="nav-item nav-link" href="rules.html">Rules</a>
+
+                <a class="nav-item nav-link" href="top10.html">Top 10</a>
+                
             </div>
         </div>
-    
-        <nav class="navbar navbar-dark bg-dark">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-        </nav>
-    </div>
+    </nav>
+       
+
     <!---------------------FORM------------------------------->
+        <div>    
             <form onsubmit="savePlayer()">
                 <h3>Before you start, introduce yourself:</h3>
                 <div class="form-group">

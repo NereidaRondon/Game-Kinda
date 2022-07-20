@@ -1,13 +1,28 @@
 div {
-    border: 2px solid black;
+    border: 1px solid black;
     padding: 5px;
-    margin: 10px;
+    margin: 1rem;
 } 
 body.bg{
-  background-color: rgb(200, 200, 200);
+  background-color: rgb(128, 128, 128);
   font-family: 'Century Gothic', monospace ,sans-serif;
-  margin:2rem;
+  color:black;
 }
+/* -------------NAVS--------------- */
+
+.nav-icon{
+  margin: auto;
+}
+.nav
+
+/* ------------------------------- */
+
+
+
+
+
+/* ------------------------------- */
+
 .container-decor{
   background-color: rgb(255, 225, 105);
   margin: 2rem auto;
@@ -105,25 +120,19 @@ button.btn{
 }
 
 /* ---------------TABLE----------------- */
-.table-body{
-	background-color: rgb(60, 60, 60);
-	font-family: 'Century Gothic', sans-serif;
-	
-}
+
 .table-container{
-	margin: 5rem auto;
-	max-width: 80%;
+	margin: auto;
+	max-width: 90%;
+  font-family: 'Century Gothic', sans-serif;
 	justify-content: center;
 	background-color: rgb(255, 225, 105);
 }
 
 
-h1.table-text{
+h1.table-label{
 	text-align: center;
-	font-family: 'Rampart One', cursive;
-	color:black;
-	font-size: 50px;
-	padding: 10px 0;
-	
+	padding: 0;
+	background: linear-gradient(90deg, #ff5202, #ff302f, #ff006e, #ff0090, #fb00d9, #d823fc);
 }
 
