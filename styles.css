@@ -1,5 +1,5 @@
 div.space {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 1rem;
     margin: 2rem auto;
 } 
@@ -52,7 +52,7 @@ body.bg{
 }
 /* ------------------------------- */
 .form-bg{
-  background-color:rgb(255, 225, 105);
+  /* background-color:rgb(255, 225, 105); */
   margin: 3rem auto;
   max-width: 500px;
 }
@@ -182,7 +182,7 @@ input.input {
   font-family: 'Century Gothic', monospace ,sans-serif;
   font-weight: bolder;
   text-align: center;
-  border: 2px solid black;
+  border: 2px solid #ff5202;
   background-color: rgb(200, 200, 200);
 }
 
