@@ -14,7 +14,8 @@
 
 // console.log(dropdownElementList);
 
-document.querySelector('#greet-player').setAttribute('hidden', '');
+// document.querySelector('#greet-player').setAttribute('hidden', '');
+document.getElementById("playGame").style.display = "none";
 ////////////////////////////////////////////////////////
 
 //tabs over when you hit enter
@@ -27,30 +28,31 @@ function handleEnter(event) {
 }
    
 //////////////////////////////////////////////////////// 
-function disableLink() {
-  document.getElementById("startLink").disabled = true;
-}
-disableLink();
+// function disableLink() {
+//   document.getElementById("startLink").disabled = true;
+// }
+// disableLink();
 
-function enableLink() {
-  document.getElementById("startLink").disabled = false;
-};
+// function enableLink() {
+//   document.getElementById("startLink").disabled = false;
+// };
 
 // Store Player Name
 function savePlayer(){
     let player = document.getElementById('player').value;
     sessionStorage.setItem('playerName', player);
-    document.querySelector('#greet-player').removeAttribute('hidden', '');
+    console.log(sessionStorage.getItem('playerName'));
+    console.log(player);
     
+    document.getElementById("playGame").style.display = "block";
+    
+    
+    document.querySelector('#playerHi').innerHTML=`${player}`;
 };
     
-let player = sessionStorage.getItem('playerName');
-console.log(player);
-document.querySelector('#playerHi').innerHTML=`${player}`;
+// let player = sessionStorage.getItem('playerName');
 
-    
-
-
+// document.querySelector('#playerHi').innerHTML=`${player}`;
 
 
 // document.addEventListener('DOMContentLoaded',() => {

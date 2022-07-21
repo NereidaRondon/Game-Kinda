@@ -15,17 +15,28 @@ div.space {
   border: 2px solid red;
 } */
 
-.space1{
-  padding: 1rem .5rem;
-  margin: 2rem 1rem;
+.space-rules{
+  padding: 4rem;
+  margin: 3rem;
   justify-content: space-around;
   box-shadow: 5px 6px 10px rgb(33, 37, 41);
 }
 
+.space-hints{
+  padding: 2rem;
+  margin: 1rem;
+  justify-content: space-around;
+  box-shadow: 5px 6px 10px rgb(33, 37, 41);
+}
+
+.rules{
+  background: #e354ff;
+}
+
+
 body.bgDark{
   background-color: rgb(35, 37, 39);
   font-family: 'Century Gothic', monospace ,sans-serif;
-  
 }
 
 body.bg{

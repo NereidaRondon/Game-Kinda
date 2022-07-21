@@ -312,7 +312,7 @@ console.log(player);
 const start = document.querySelector("#startBtn");
 const submit = document.querySelector("#submitBtn");
 const clear = document.querySelector("#clearBtn");
-const next = document.querySelector("#nextBtn");
+const next = document.querySelector("#nextBtn");  
 
 let newGame = new Game;
 
