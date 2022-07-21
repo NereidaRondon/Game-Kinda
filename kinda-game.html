@@ -9,6 +9,7 @@
     <meta name="keywords" content="Word game, HTML, CSS, JavaScript, Bootsrtap, Nereida Rondon">
       
     <title>Kinda</title>
+    <link rel="shortcut icon" type="image" href="images/favicon.png" />   
     
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"/>
@@ -106,21 +107,24 @@
         
         <!----------------------BUTTONS------------------------>
         
-        <button class="btn" type="submit" id="submitBtn" onclick="newGame.submit()" disabled>SUBMIT</button>
+        <button class="myBtn btn" type="submit" id="submitBtn" onclick="newGame.submit()" disabled>SUBMIT</button>
         
-        <button class="btn" type="button" id="clearBtn" onclick="newGame.clear()" disabled>CLEAR</button>
+        <button class="myBtn btn btn-dark" type="button" id="clearBtn" onclick="newGame.clear()" disabled>CLEAR</button>
         
-        <button class="btn" type="button" id="nextBtn" onclick="newGame.reset()" disabled>NEXT ROUND</button>
+        <button class="myBtn btn" type="button" id="nextBtn" onclick="newGame.reset()" disabled>NEXT ROUND</button>
 
+        <br>
+        <br>
         <!------------------------------------------------------>  
 
         <script src="script-game.js"></script>
         <script src="node_modules/jquery/dist/jquery.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     </div>
-
+    <div class="footer">
         <footer>
             <span>&copy;<script>document.write(new Date().getFullYear()); </script> Nereida Rondon</span>
         </footer>
+    </div>
   </body>
 </html>

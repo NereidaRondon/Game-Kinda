@@ -1,6 +1,6 @@
 div {
-    border: 1px solid black;
-    padding: 5px;
+    /* border: 1px solid black; */
+    padding: 1rem;
     margin: 1rem;
 } 
 body.bg{
@@ -13,10 +13,19 @@ body.bg{
 .nav-icon{
   margin: auto;
 }
-.nav
+
+
+.nav-text{
+  padding: 0 2rem;
+  font-size: 20px;
+}
 
 /* ------------------------------- */
-
+.form-bg{
+  background-color:rgb(255, 225, 105);
+  margin: auto;
+  max-width: 500px;
+}
 
 
 
@@ -60,8 +69,7 @@ input.input {
   text-align: center;
   background: rgb(255, 225, 105);
 }
-button.btn{
-  background-color: rgb(255, 95, 3);
+.myBtn{
   margin: 2rem auto;
   padding: .5rem 1rem;
   font-size: large;
@@ -69,16 +77,22 @@ button.btn{
   font-family: 'Century Gothic', monospace ,sans-serif;
   display:flex;
   justify-content: center;
+  align-self: center;
   border: 1px solid black;
+  transition: 200ms ease-in-out;
+}
+.myBtn:hover{
+  filter:drop-shadow(2px 2px 4px rgba(44, 2, 30, 0.06));
+}
+#submitBtn{
+  background-color: rgb(255, 95, 3); 
 }
 #startBtn{
   background-color: rgb(241, 65, 94);
 }
-
 #nextBtn{
   background-color: rgb(229, 50, 170);
 }
-
 .btn-close{
   font-size: 30px;
   position:absolute;
@@ -123,7 +137,7 @@ button.btn{
 
 .table-container{
 	margin: auto;
-	max-width: 90%;
+  max-width: 900px;
   font-family: 'Century Gothic', sans-serif;
 	justify-content: center;
 	background-color: rgb(255, 225, 105);
@@ -132,7 +146,8 @@ button.btn{
 
 h1.table-label{
 	text-align: center;
-	padding: 0;
+	margin: 0;
+  padding: 0;
 	background: linear-gradient(90deg, #ff5202, #ff302f, #ff006e, #ff0090, #fb00d9, #d823fc);
 }
 

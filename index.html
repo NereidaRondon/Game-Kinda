@@ -9,6 +9,7 @@
     <meta name="keywords" content="Word game, HTML, CSS, JavaScript, Bootsrtap, Nereida Rondon">
 
     <title>Kinda Wordle</title>
+    <link rel="shortcut icon" type="image" href="images/favicon.png" />
 
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"/>
     <link rel="stylesheet" href="styles.css"/>
@@ -37,20 +38,20 @@
     <!-----------------COLLAPSEABLE NAVBAR------------------->
 
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         
-        <a class="navbar-brand" href="#">Menu</a>
+        <a class="navbar-brand" href="index.html"><img src="images\favicon.png" width="30px"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-text nav-item nav-fill nav-link active" href="index.html">Home<span class="sr-only">(current)</span></a>
 
-                <a class="nav-item nav-link" href="rules.html">Rules</a>
+                <a class="nav-text nav-item nav-fill nav-link active" href="rules.html">Rules</a>
 
-                <a class="nav-item nav-link" href="top10.html">Top 10</a>
+                <a class="nav-text nav-item nav-fill nav-link active" href="top10.html">Top 10</a>
                 
             </div>
         </div>
@@ -58,9 +59,9 @@
        
 
     <!---------------------FORM------------------------------->
-        <div>    
+        <div class="form-bg">    
             <form onsubmit="savePlayer()">
-                <h3>Before you start, introduce yourself:</h3>
+                <h3>Who is playing this game?</h3>
                 <div class="form-group">
                     <label for="player">Player</label>
                     <input type="text" class="form-control" id="player" placeholder="your name" required>
@@ -86,7 +87,7 @@
                 </div>
                 <br>
                 <br>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-dark" >SUBMIT</button>
             </form>
         </div>
 
@@ -94,7 +95,7 @@
 
         <!---------- START GAME BUTTON------------->
         <div>
-            <a href="kinda-game.html"><button class="btn" type="button" id="startBtn">PLAY</button></a>
+            <a href="kinda-game.html"><button class="btn" type="button" id="startBtn" disabled>PLAY</button></a>
         </div>
 
       
@@ -108,8 +109,10 @@
     <script src="node_modules\jquery\dist\jquery.js"></script>
     <script src="node_modules\bootstrap\dist\js\bootstrap.bundle.js"></script>
 
+    <div class="footer">
         <footer>
             <span>&copy;<script>document.write(new Date().getFullYear()); </script> Nereida Rondon</span>
         </footer>
+    </div>
   </body>
 </html>

@@ -26,6 +26,7 @@
 function savePlayer(){
         let player = document.getElementById('player').value;
         sessionStorage.setItem('playerName', player);
+        document.querySelector("startBtn").removeAttribute("disabled", "");
     }
     
     
