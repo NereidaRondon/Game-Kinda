@@ -120,7 +120,14 @@ h1, h2, h4, p{
 footer{
   /* color:rgb(255, 172, 199); */
   color:rgb(238, 15, 127);
+  margin-top: 10rem;
 }
+.footer-space{
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+
 input.input {
   margin: 1rem auto;
   width: 3rem;
