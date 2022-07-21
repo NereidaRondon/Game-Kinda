@@ -1,5 +1,5 @@
 div.space {
-    /* border: 1px solid black; */
+    border: 1px solid black;
     padding: 1rem;
     margin: 2rem auto;
 } 
@@ -50,6 +50,13 @@ body.bg{
   display: inline-block;
   border-bottom-width: 2px;
 }
+
+.logo-center{
+  display: flex;
+  margin: 2rem auto;
+
+}
+
 /* ------------------------------- */
 .form-bg{
   /* background-color:rgb(255, 225, 105); */
@@ -123,28 +130,42 @@ input.input {
 
 /* -------------BUTTONS-------------- */
 .myBtn{
+  display:flex;
   margin: 2rem auto;
   padding: .5rem 1rem;
   font-size: large;
-  font-weight: bold;
   font-family: 'Century Gothic', monospace ,sans-serif;
-  display:flex;
-  justify-content: center;
-  align-self: center;
   border: 1px solid black;
   transition: 200ms ease-in-out;
 }
-.myBtn:hover{
+
+.myBtn:hover{ 
   filter:drop-shadow(2px 2px 4px rgba(44, 2, 30, 0.06));
 }
-#submitBtn{
-  background-color: rgb(255, 95, 3); 
+
+div{
+  border: 2px solid red;
 }
 #startBtn{
   background-color: rgb(241, 65, 94);
+  width: 100px;
+  
+}
+#submitBtn{
+  background-color: rgb(255, 95, 3); 
+  width: 100px;
+  margin: 1rem auto;
+  justify-content: center;
+  align-self: center;
+}
+#clearBtn{
+  width: 100px;
+  margin: 1rem auto;
 }
 #nextBtn{
   background-color: rgb(229, 50, 170);
+  width: 100px;
+  margin: 1 rem auto;
 }
 .btn-close{
   font-size: 30px;
