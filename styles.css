@@ -4,6 +4,13 @@ div.space {
   margin: 2rem auto;
 } 
 
+@media only screen and (max-width: 400px){
+  div.space {
+    padding: .5rem;
+    margin: 1rem auto;
+  } 
+}
+
 /* div{
   border: 2px solid red;
 } */
@@ -16,7 +23,7 @@ div.space {
 }
 
 body.bgDark{
-  background-color: rgb(33, 37, 41);
+  background-color: rgb(35, 37, 39);
   font-family: 'Century Gothic', monospace ,sans-serif;
   
 }
@@ -25,6 +32,10 @@ body.bg{
   background-color: rgb(190, 190, 190);
   font-family: 'Century Gothic', monospace ,sans-serif;
   color:black;
+}
+
+.link-design{
+  text-decoration: none;
 }
 
 
@@ -56,6 +67,8 @@ body.bg{
 .space-under{
   padding: 1rem;
 }
+
+
 /* border-bottom-width HAS to go under border-bottom */
 .border-bot{
   display: inline-block;
@@ -75,29 +88,71 @@ body.bg{
 
 }
 
-/* ------------------------------- */
+
+
+/* --------FORM-------------------- */
 .form-bg{
   /* background-color:rgb(255, 225, 105); */
   margin: 3rem auto;
   max-width: 500px;
 }
 
+.playgame{
+  padding: 3rem;
+  margin:0;
+  background: linear-gradient(90deg, #ff8a54, #ff7151, #ff5a51, #ff3e4e, #ff3e68, #ff4187, #ff43a1, #ff46bb, #ff49d4, #ff4ded, #f94fff, #e354ff);;
+}
+
+.greet-player{
+  max-height: 5rem;
+  
+}
+#greet-player{
+  margin-top: 2rem;
+  color:rgb(0, 0, 0);
+}
+
+/* background: linear-gradient(90deg, #ff5202, #ff3205, #fe1408, #fe0b20, #fe0e44, #fe1166, #fd1487, #fd17a7, #fd1ac7, #fd1de5, #f520fc, #d823fc); */
 
 
+/* ----------------------------------- */
 
-/* ------------------------------- */
+
+h1, h2, h4, p{
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+footer{
+  /* color:rgb(255, 172, 199); */
+  color:rgb(238, 15, 127);
+  margin-top: 5rem;
+}
+.footer-space{
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+/* ------------GAME-------------- */
+
 
 .container-decor{
   background-color: rgb(170, 170, 170);
   margin: 3rem auto;
   padding: 0rem 2rem;
   max-width: 90%;
-  /* border: 20px ridge rgb(255, 95, 3); */
   border-width: 30px;
   border-style: solid;
   border-image: linear-gradient(to right, rgb(255, 82, 2), rgb(216, 35, 252))1;
 }
-
+@media only screen and (max-width: 400px){
+  .container-decor{
+    margin: 2rem 1rem;    
+    padding: 0rem .5rem;
+    border-width: 10px;
+  
+  }
+} 
 .greeting-container{
   max-height: 5rem;
   
@@ -107,34 +162,17 @@ body.bg{
   color:rgb(255, 255, 255);
 }
 
-.guess-box{
-  display:flex;
-  margin: auto;
-  justify-content: center;
-}
-h1, h2, h4, p{
-  text-align: center;
-  padding: 0;
-  margin: 0;
-}
-footer{
-  /* color:rgb(255, 172, 199); */
-  color:rgb(238, 15, 127);
-  margin-top: 10rem;
-}
-.footer-space{
-  padding: 0 2rem;
-  margin: 0 auto;
-}
-
 
 input.input {
   margin: 1rem auto;
   width: 3rem;
   height: 3rem;
   font-size: 30px;
+  color:white;
+  text-transform: uppercase;
+  font-weight: bolder;
   text-align: center;
-  background: rgb(255, 225, 105);
+  background: rgb(35, 37, 39);
 
 }
 @media only screen and (max-width: 600px){
@@ -142,13 +180,87 @@ input.input {
   width: 2rem;
   height: 2rem;
   font-size: 20px;
+  }
+  .row > * {
+    padding-right: calc(var(--bs-gutter-x) * 0.2);
+    padding-left: calc(var(--bs-gutter-x) * 0.2);;
+  }
 
 }
+
+.guess-box{
+  display:flex;
+  margin: auto;
+  justify-content: center;
+}
+.letter{
+  padding:0;
+}
+.alpha{
+  font-weight: bolder;
 }
 
-.link-design{
-  text-decoration: none;
+.cont-indent{
+  border: 1px solid black;
+  padding: 0rem;
+  margin: 2rem auto;
+  
 }
+
+.indent1{
+   padding: 0 3rem;
+  border: 1px solid black;
+}
+
+.indent2{
+  padding: 0 6rem;
+  border: 1px solid black;
+}
+.indent3{
+  padding: 0 9rem;
+  border: 1px solid black;
+}
+
+
+@media only screen and (max-width: 700px){
+  
+  .cont-indent{
+    padding: 0rem;
+    font-size: 12px;
+  }
+  .indent1{
+    padding: 0;
+  }
+
+  .indent2{
+    padding: 0 .5rem;
+  }
+  .indent3{
+    padding: 0 1rem;
+  }
+}
+
+
+
+
+/* -------------SCOREBOARD-------------- */
+.scrbrd-box {
+  width: 7rem;
+  margin: 1rem auto;  
+}
+
+.round, .points, .chances{
+  padding: .5rem;
+  width: 2rem;
+  font-family: 'Century Gothic', monospace ,sans-serif;
+  font-weight: bolder;
+  color:white;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: rgb(35, 37, 39);
+  /* border: 2px solid #ff5202; */
+}
+
 
 
 /* -------------BUTTONS-------------- */
@@ -169,7 +281,6 @@ input.input {
 
 
 #startBtn{
-  background-color: rgb(241, 65, 94);
   width: 150px;
   text-align: center;
 }
@@ -212,22 +323,7 @@ input.input {
 .alert-container{
   height: 4rem;
 }
-/* -------------SCOREBOARD-------------- */
-.scrbrd-box {
-  width: 7rem;
-  margin: 1rem auto;  
-}
 
-
-.round, .points, .chances{
-  padding: .5rem;
-  width: 2rem;
-  font-family: 'Century Gothic', monospace ,sans-serif;
-  font-weight: bolder;
-  text-align: center;
-  border: 2px solid #ff5202;
-  background-color: rgb(200, 200, 200);
-}
 
 /* ---------------TABLE----------------- */
 
