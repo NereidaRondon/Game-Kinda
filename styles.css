@@ -6,7 +6,7 @@ div.space {
 
 
 body.bg{
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(200, 200, 200);
   font-family: 'Century Gothic', monospace ,sans-serif;
   color:black;
 }
@@ -219,9 +219,9 @@ input.input {
 }
 
 
-h1.table-label{
+.table-label{
 	text-align: center;
-	margin: 0;
+	margin: auto;
   padding: 0;
 	background: linear-gradient(90deg, #ff5202, #ff302f, #ff006e, #ff0090, #fb00d9, #d823fc);
 }
