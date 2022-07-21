@@ -1,29 +1,59 @@
-div {
-    /* border: 1px solid black; */
+div.space {
+    border: 1px solid black;
     padding: 1rem;
-    margin: 1rem;
+    margin: 2rem auto;
 } 
+
+
 body.bg{
-  background-color: rgb(128, 128, 128);
+  background-color: rgb(255, 255, 255);
   font-family: 'Century Gothic', monospace ,sans-serif;
   color:black;
 }
 /* -------------NAVS--------------- */
+.link-style:hover{
+  filter: drop-shadow(3px 3px 4px #cd04ff);
+}
 
+.signature{
+  margin-left:1rem;
+  transition: 200ms ease-in-out;
+}
+.signature:hover{
+  filter: drop-shadow(2px 2px 1px #cd04ff);
+}
 .nav-icon{
   margin: auto;
 }
 
-
-.nav-text{
-  padding: 0 2rem;
-  font-size: 20px;
+.nav-cont{
+  padding:0;
+  margin: 0;
 }
 
+.hamburger{
+  margin-right: 1rem;
+}
+
+.space-under{
+  padding: 1rem;
+}
+/* border-bottom-width HAS to go under border-bottom */
+.border-bot{
+  display: inline-block;
+  transition: 100ms step-end ;
+  border-bottom: 5px solid #ff006e;
+  border-bottom-width: 0px; 
+}
+
+.border-bot:hover{
+  display: inline-block;
+  border-bottom-width: 2px;
+}
 /* ------------------------------- */
 .form-bg{
   background-color:rgb(255, 225, 105);
-  margin: auto;
+  margin: 3rem auto;
   max-width: 500px;
 }
 
@@ -34,9 +64,9 @@ body.bg{
 
 .container-decor{
   background-color: rgb(255, 225, 105);
-  margin: 2rem auto;
+  margin: 3rem auto;
   padding: 0rem 2rem;
-  max-width: ;
+  max-width: 90%;
   /* border: 20px ridge rgb(255, 95, 3); */
   border-width: 20px;
   border-style: solid;
@@ -63,12 +93,35 @@ footer{
   color:rgb(238, 15, 127);
 }
 input.input {
-  width: 4rem;
-  height: 4rem;
-  font-size: 50px;
+  width: 3rem;
+  height: 3rem;
+  font-size: 30px;
   text-align: center;
   background: rgb(255, 225, 105);
+
 }
+@media only screen and (max-width: 600px){
+  input.input {
+  width: 2rem;
+  height: 2rem;
+  font-size: 20px;
+  text-align: center;
+  background: rgb(255, 225, 105);
+
+}
+}
+
+.link-design{
+  text-decoration: none;
+}
+
+.disabled-link {
+  pointer-events: none;
+}
+
+
+
+/* -------------BUTTONS-------------- */
 .myBtn{
   margin: 2rem auto;
   padding: .5rem 1rem;

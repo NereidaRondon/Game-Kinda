@@ -17,24 +17,18 @@
   </head>
   <body class="bg">
 
-    <!-------------- MESSAGE FOR GAME START------------------>
+    <!------------- MESSAGE FOR GAME START-------------->
         <div id="startGame" class="startGameMessage" role="dialog" aria-hidden="true">
               
             <h3></h3>
                 <div class="greeting" id="greeting">
-                    <h1>Welcome 👋 <span id="playerHi"></span>!</h1>
+                    <h1>Good luck <span id="playerHi"></span>!</h1>
                 </div>
 
-            <!-- <div>
-                <button type="button" class="btn btn-primary" onclick="newGame.start()">START GAME</button>
-
-                <a href="index.html"><button type="button" class="btn btn-secondary" data-dismiss="modal">EXIT</button></a>
-            </div> -->
         </div>
    
+    <!-------------- MODAL FOR GAME WIN----------------->
 
-
-    <!------------------ MODAL FOR GAME WIN--------------------->
         <div id="endGame" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -66,18 +60,19 @@
         </div>
 
 
-    <!--------------------------------------------------->
-
+    <!--------------------------------------------->
 
 
     <div class="container-decor">
-        <!-----------------CLOSE BUTTON--------------------->    
+
+        
+        <!-------------CLOSE BUTTON---------------->    
         <a href="index.html"><button type="button" class="btn-close" id="closeBtn" aria-label="Close" hidden="hidden"></button></a> 
          
         <h1>Kinda</h1><br>
         <h2>The word game</h2>
               
-        <!-------------------SCOREBOARD------------------------>
+        <!-------------SCOREBOARD------------------>
         
         <div class="container scrbrd-box">
             <div class="row">
@@ -87,13 +82,13 @@
             </div>
         </div>
     
-        <!------------------------------------------------------>
+        <!--------------------------------------------->
         
-        <!----------------- ALERT ------------------>
+        <!------------- ALERT -------------->
         
         <div class="message alert alert-secondary" role="alert" id="message" hidden></div>
 
-        <!------------------INPUT BOXES-------------------------->
+        <!---------------INPUT BOXES--------------------->
 
         <div class="guess-box">
             <form id="form">
@@ -117,7 +112,7 @@
         <br>
         <!------------------------------------------------------>  
 
-        <script src="script-game.js"></script>
+        <script src="game.js"></script>
         <script src="node_modules/jquery/dist/jquery.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     </div>
