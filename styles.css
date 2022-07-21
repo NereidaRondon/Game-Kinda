@@ -1,13 +1,19 @@
 div.space {
-    /* border: 1px solid black; */
-    padding: 1rem;
-    margin: 2rem auto;
+  /* border: 1px solid black; */
+  padding: 1rem;
+  margin: 2rem auto;
 } 
 
 /* div{
   border: 2px solid red;
 } */
 
+.space1{
+  padding: 1rem .5rem;
+  margin: 2rem 1rem;
+  justify-content: space-around;
+  box-shadow: 5px 6px 10px rgb(33, 37, 41);
+}
 
 body.bgDark{
   background-color: rgb(33, 37, 41);
@@ -16,7 +22,7 @@ body.bgDark{
 }
 
 body.bg{
-  background-color: rgb(170, 170, 170);
+  background-color: rgb(190, 190, 190);
   font-family: 'Century Gothic', monospace ,sans-serif;
   color:black;
 }
