@@ -193,11 +193,9 @@ class Game {
                 
                 for(var i of word){
                     if (i===letter.toLowerCase()){
-                        console.log(`match ${i} and ${letter}`);
                         document.getElementById(letter.toUpperCase()).style.backgroundColor = 'black';
                     }else{
-                        console.log(`NOT a match, ${i} and ${letter}`);
-                        document.getElementById(letter.toUpperCase()).style.color='#ff6923';  
+                        document.getElementById(letter.toUpperCase()).style.color='#fc5202';  
                     }
                 };
             };   
@@ -287,8 +285,8 @@ class Game {
         
         for(let i=0; i<26;i++){
             let letter=(id)=>{
-            document.getElementById(id).style.color='rgb(255, 82, 2)'
-            document.getElementById(id).style.backgroundColor='rgb(black)';
+            document.getElementById(id).style.color='#212529'
+            document.getElementById(id).style.backgroundColor='#fc5202';
             };
             letter(alphabet[i]);
         };
