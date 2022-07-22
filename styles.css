@@ -130,11 +130,11 @@ footer{
   border-style: solid;
   border-image: linear-gradient(to right, rgb(255, 82, 2), rgb(216, 35, 252))1;
 }
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 500px){
   .container-decor{
-    margin: 2rem 1rem;    
+    margin: 1rem auto;    
     padding: 0rem .5rem;
-    border-width: 10px;
+    border-width: .75rem;
   
   }
 } 
@@ -166,10 +166,6 @@ input.input {
   height: 2rem;
   font-size: 20px;
   }
-  .row > * {
-    padding-right: calc(var(--bs-gutter-x) * 0.2);
-    padding-left: calc(var(--bs-gutter-x) * 0.2);;
-  }
 
 }
 
@@ -179,64 +175,91 @@ input.input {
   justify-content: center;
 }
 
-.alpha{
+.alpha-box{
+  background-color: rgb(255, 82, 2);
+  margin: 5px;
+  padding: 3px;
+  border-radius: 5px;
+}
+.alpha-cont{
+  margin: 2rem auto;
   font-weight: bolder;
   font-size: 25px;
 }
-
-.cont-indent{
-  padding: 0rem;
-  margin: 2rem auto;
-}
-
 .indent1{
-  padding: 0 2rem;
+  padding: 1rem 2rem;
 }
-
 .indent2{
-  padding: 0 4rem;
+  padding: 1rem 4rem;
 }
 .indent3{
-  padding: 0 6rem;
+  padding: 1rem 6rem;
 }
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 800px){
   
-  .cont-indent{
-    padding: 0rem;
-    font-size: 12px;
+  .alpha-box{
+    margin: 3px;
+    border-radius: 3px;
+  }
+  .alpha-cont{
+    font-size: 16px;
   }
   .indent1{
-    padding: 0;
+    padding: .5rem .5rem; 
   }
 
   .indent2{
-    padding: 0 .5rem;
+    padding: .5rem 1rem;
   }
   .indent3{
-    padding: 0 1rem;
+    padding: .5rem 1.5rem;
   }
+
 }
 
+@media only screen and (max-width: 600px){
+  
+  .alpha-box{
+    margin: 2px 1px;
+    border-radius: 2px;
+  }
+  .alpha-cont{
+    padding: 4px 0;
+    font-size: 12px;
+  }
+  .indent1{
+    padding: .5rem 0; 
+  }
 
+  .indent2{
+    padding:.5rem  0 .5rem;
+  }
+  .indent3{
+    padding: .5rem 1.2rem;
+  }
+
+}
 
 
 /* -------------SCOREBOARD-------------- */
 .scrbrd-box {
-  width: 7rem;
-  margin: 1rem auto;  
+  margin: 2rem auto;
+  padding: .5rem 2rem;
+  justify-content: center;
+  align-self: center;
+
 }
 
-.round, .points, .chances{
-  padding: .5rem;
-  width: 2rem;
+.stat{
+  padding: .5rem 1rem;
   font-family: 'Century Gothic', monospace ,sans-serif;
   font-weight: bolder;
   color:white;
   text-transform: uppercase;
   text-align: center;
   background-color: rgb(35, 37, 39);
-  /* border: 2px solid #ff5202; */
+  
 }
 
 
@@ -275,7 +298,7 @@ input.input {
 }
 #nextBtn{
   background-color: rgb(229, 50, 170);
-  width: 100px;
+  width: 150px;
   margin: 1 rem auto;
 }
 .btn-close{
@@ -289,13 +312,12 @@ input.input {
 }
 .alert{
   margin: auto;
-  font-size: larger;
-  width: 20rem;
+  width: auto;
   height: 4rem;
   font-weight: bold;
   text-align: center;
   border: none;
-  background-color: rgb(255, 225, 105);
+  
 }
 
 .alert-container{

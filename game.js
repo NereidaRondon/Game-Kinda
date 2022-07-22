@@ -1,7 +1,5 @@
-
 let player = sessionStorage.getItem('playerName');
     
-
 const start = document.querySelector("#startBtn");
 const submit = document.querySelector("#submitBtn");
 const clear = document.querySelector("#clearBtn");
@@ -14,9 +12,9 @@ let jump=(field, element)=>{
 };
 // -------------------------------------
 
-// const wordBank=['abhor', 'above', 'acute', 'agent', 'alarm', 'alone', 'angle', 'arena', 'avoid', 'basic', 'beach', 'below', 'birth', 'block', 'brain', 'break', 'brief', 'build', 'cable', 'chart', 'check', 'class', 'clean', 'coast', 'coach', 'color', 'cough', 'crash', 'crime', 'curve', 'dance', 'debut', 'dodger', 'drama', 'dream', 'drive', 'eager', 'earth', 'eject', 'empty', 'equal', 'error', 'event', 'exact', 'exist', 'false', 'field', 'fight', 'final', 'flash', 'fleet', 'force', 'frame', 'front', 'fudge', 'funny', 'giant', 'glass', 'grace', 'grade', 'grant', 'grass', 'group', 'guest', 'guide', 'happy', 'haste', 'heart', 'heavy', 'house', 'human', 'image', 'index', 'input', 'jaded', 'joint', 'judge', 'karma', 'kayak', 'kiosk', 'label', 'laser', 'later', 'laugh', 'learn', 'leave', 'level', 'limit', 'logic', 'lucky', 'lunch', 'magic', 'match', 'media', 'model', 'money', 'month', 'motor', 'movie', 'music', 'never', 'night', 'noise', 'novel', 'ocean', 'order', 'other', 'paint', 'panic', 'paper', 'party', 'peace', 'phase', 'phone', 'pilot', 'plane', 'plant', 'point', 'power', 'prime', 'proud', 'prove', 'queen', 'quiet', 'radio', 'range', 'rapid', 'ratio', 'react', 'ready', 'rival', 'river', 'rough', 'round', 'route', 'royal', 'scope', 'score', 'shape', 'sheet', 'shift' , 'short', 'sight', 'skill', 'small', 'smart', 'smile', 'solid', 'sound', 'space', 'speak', 'sport', 'start', 'steam', 'stock', 'storm', 'story', 'study', 'style', 'super', 'sweet', 'table', 'taste', 'teach', 'teeth', 'theme', 'think', 'tight', 'title', 'topic', 'tough', 'tower', 'trust', 'under', 'union', 'urban', 'valid', 'vapid', 'venom', 'video', 'virus', 'visit', 'voice', 'waste', 'watch', 'water', 'wheel', 'where', 'whole', 'woman', 'world', 'worry', 'worth', 'write', 'wrong', 'yield', 'young', 'youth', 'zesty', 'zombi'];
+const wordBank=['abhor', 'above', 'acute', 'agent', 'alarm', 'alone', 'angle', 'arena', 'avoid', 'basic', 'beach', 'below', 'birth', 'block', 'brain', 'break', 'brief', 'build', 'cable', 'chart', 'check', 'class', 'clean', 'coast', 'coach', 'color', 'cough', 'crash', 'crime', 'curve', 'dance', 'debut', 'dodger', 'drama', 'dream', 'drive', 'eager', 'earth', 'eject', 'empty', 'equal', 'error', 'event', 'exact', 'exist', 'false', 'field', 'fight', 'final', 'flash', 'fleet', 'force', 'frame', 'front', 'fudge', 'funny', 'giant', 'glass', 'grace', 'grade', 'grant', 'grass', 'group', 'guest', 'guide', 'happy', 'haste', 'heart', 'heavy', 'house', 'human', 'image', 'index', 'input', 'jaded', 'joint', 'judge', 'karma', 'kayak', 'kiosk', 'label', 'laser', 'later', 'laugh', 'learn', 'leave', 'level', 'limit', 'logic', 'lucky', 'lunch', 'magic', 'match', 'media', 'model', 'money', 'month', 'motor', 'movie', 'music', 'never', 'night', 'noise', 'novel', 'ocean', 'order', 'other', 'paint', 'panic', 'paper', 'party', 'peace', 'phase', 'phone', 'pilot', 'plane', 'plant', 'point', 'power', 'prime', 'proud', 'prove', 'queen', 'quiet', 'radio', 'range', 'rapid', 'ratio', 'react', 'ready', 'rival', 'river', 'rough', 'round', 'route', 'royal', 'scope', 'score', 'shape', 'sheet', 'shift' , 'short', 'sight', 'skill', 'small', 'smart', 'smile', 'solid', 'sound', 'space', 'speak', 'sport', 'start', 'steam', 'stock', 'storm', 'story', 'study', 'style', 'super', 'sweet', 'table', 'taste', 'teach', 'teeth', 'theme', 'think', 'tight', 'title', 'topic', 'tough', 'tower', 'trust', 'under', 'union', 'urban', 'valid', 'vapid', 'venom', 'video', 'virus', 'visit', 'voice', 'waste', 'watch', 'water', 'wheel', 'where', 'whole', 'woman', 'world', 'worry', 'worth', 'write', 'wrong', 'yield', 'young', 'youth', 'zesty', 'zombi'];
 
-const wordBank=['eight', 'saint', 'first', 'right', 'tight', 'might', 'light', 'night', 'sight', 'reign', 'right', 'tight', 'might', 'light', 'night', 'sight','reign', 'flirt', 'sight', 'fight', 'right', 'write', 'might', 'light', 'feast', 'sight','feast', 'right', 'reign', 'fight', 'flirt', 'tight', 'might', 'light', 'night', 'sight','fight', 'right', 'sight', 'fight', 'right', 'reign', 'might', 'light', 'night', 'sight','write', 'feast', 'sight', 'taint', 'reign', 'tight', 'might', 'light', 'night', 'sight','fight', 'right', 'sight', 'fight', 'right', 'tight', 'flirt', 'light', 'night', 'sight','fight', 'feast', 'sight', 'fight', 'right', 'tight', 'might', 'light', 'write', 'sight','flirt', 'right', 'sight', 'fight', 'feast', 'tight', 'write', 'flirt', 'night', 'feast','fight', 'right', 'reign', 'fight', 'right', 'taint', 'might', 'light', 'eight', 'sight','fight', 'right']
+// const wordBank=['eight', 'saint', 'first', 'right', 'tight', 'might', 'light', 'night', 'sight', 'reign', 'right', 'tight', 'might', 'light', 'night', 'sight','reign', 'flirt', 'sight', 'fight', 'right', 'write', 'might', 'light', 'feast', 'sight','feast', 'right', 'reign', 'fight', 'flirt', 'tight', 'might', 'light', 'night', 'sight','fight', 'right', 'sight', 'fight', 'right', 'reign', 'might', 'light', 'night', 'sight','write', 'feast', 'sight', 'taint', 'reign', 'tight', 'might', 'light', 'night', 'sight','fight', 'right', 'sight', 'fight', 'right', 'tight', 'flirt', 'light', 'night', 'sight','fight', 'feast', 'sight', 'fight', 'right', 'tight', 'might', 'light', 'write', 'sight','flirt', 'right', 'sight', 'fight', 'feast', 'tight', 'write', 'flirt', 'night', 'feast','fight', 'right', 'reign', 'fight', 'right', 'taint', 'might', 'light', 'eight', 'sight','fight', 'right']
 
 
 let gameBank = [...wordBank];
@@ -190,23 +188,28 @@ class Game {
             document.querySelector("#message").removeAttribute('hidden', '');
             document.getElementById("message").innerHTML="❌ Try again! ❌";
             //nextBtn should already be disabled by default           
-            
-            let anyLetterMatch=(letter, word)=>{
-                            console.log(letter);
-                            for(let i=0; i<5; i++){
-                                if(letter.toLowerCase !== word[i]){
-                                    document.getElementById(letter).innerHTML="";
-                                    console.log(letter);
-                                };
-                            };
-                        };
-                        anyLetterMatch(one, this.word);
-                        anyLetterMatch(two, this.word);
-                        anyLetterMatch(three, this.word);
-                        anyLetterMatch(four, this.word);
-                        anyLetterMatch(five, this.word);
+           
+            let anyMatch=(letter, word)=>{
+                
+                for(var i of word){
+                    if (i===letter.toLowerCase()){
+                        console.log(`match ${i} and ${letter}`);
+                        document.getElementById(letter.toUpperCase()).style.backgroundColor = 'black';
+                    }else{
+                        console.log(`NOT a match, ${i} and ${letter}`);
+                        document.getElementById(letter.toUpperCase()).style.color='#ff6923';  
+                    }
+                };
+            };   
 
+            anyMatch(one, this.word);                      
+            anyMatch(two, this.word);
+            anyMatch(three, this.word);
+            anyMatch(four, this.word);
+            anyMatch(five, this.word);
+            console.log('Checked all letters in word');            
 
+            //matching inputs remain
             let letterMatch=(user, word)=>{
                 for(let i=0; i < 5; i++){
                     if(user[i].toLowerCase()!==word[i]){      
@@ -278,11 +281,22 @@ class Game {
 
         let nextWord = this.round - 1;
         console.log(`The next word: ${gameList[nextWord]}`)
+        
 
+        let alphabet=[...Array(26)].map((e, i) => String.fromCharCode(i + 65)); 
+        
+        for(let i=0; i<26;i++){
+            let letter=(id)=>{
+            document.getElementById(id).style.color='rgb(255, 82, 2)'
+            document.getElementById(id).style.backgroundColor='rgb(black)';
+            };
+            letter(alphabet[i]);
+        };
+        console.log(`keyboard is reset`);
+       
     }
 
   
-
     endGame(){
         $('#endGame').modal('show');
 
@@ -304,7 +318,6 @@ class Game {
         console.log(`Points: ${this.points}`);
         console.log(`Chances: ${this.chances}`);
     }
-
 
 }
 
