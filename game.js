@@ -98,11 +98,9 @@ class Game {
         }
         console.log(`Contains num? ${containsNumber(userWord)}`); 
 
-        console.log(`User's Word: ${userWord}`);
-        console.log(`This Word: ${this.word}`);
+        // console.log(`User's Word: ${userWord}`);
+        // console.log(`This Word: ${this.word}`);
         
-
-
         if (document.querySelector(".one").value == ""){            
             
             alert('Please fill in each box and try again');
@@ -312,9 +310,9 @@ class Game {
         document.getElementById('points').innerHTML=`POINTS: ${this.points}`;
         document.getElementById('chances').innerHTML=`CHANCES: ${this.chances}`;
 
-        console.log(`Round: ${this.round}`);
-        console.log(`Points: ${this.points}`);
-        console.log(`Chances: ${this.chances}`);
+        // console.log(`Round: ${this.round}`);
+        // console.log(`Points: ${this.points}`);
+        // console.log(`Chances: ${this.chances}`);
     }
 
 }
