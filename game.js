@@ -98,7 +98,6 @@ class Game {
         console.log(`User's Word: ${userWord}`);
         console.log(`This Word: ${this.word}`);
         
-        
 
 
         if (document.querySelector(".one").value == ""){            
@@ -186,21 +185,39 @@ class Game {
             document.querySelector("#message").removeAttribute('hidden', '');
             document.getElementById("message").innerHTML="❌ Try again! ❌";
             //nextBtn should already be disabled by default           
+            
+            let anyLetterMatch=(letter, word)=>{
+                            console.log(letter);
+                            for(let i=0; i<5; i++){
+                                if(letter.toLowerCase !== word[i]){
+                                    document.getElementById(letter).innerHTML="";
+                                    console.log(letter);
+                                };
+                            };
+                        };
+                        anyLetterMatch(one, this.word);
+                        anyLetterMatch(two, this.word);
+                        anyLetterMatch(three, this.word);
+                        anyLetterMatch(four, this.word);
+                        anyLetterMatch(five, this.word);
+
+
             let letterMatch=(user, word)=>{
                 for(let i=0; i < 5; i++){
                     if(user[i].toLowerCase()!==word[i]){      
                         let indexId=`input${(i)+1}`;
                         let clearInput = (elementId)=>{
                                 document.getElementById(elementId).value="";
-                        }
+                        };
                         clearInput(indexId);
                     };
-                };
+                
+                };         
             };
-
+          
             letterMatch(userWord, this.word);
             console.log("Letters that didn't match have been cleared")
-            
+        
         } else if(this.chances===0){
             //Words don't match and out of guesses
             document.querySelector("#message").removeAttribute('hidden', '');
