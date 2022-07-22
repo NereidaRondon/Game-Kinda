@@ -1,23 +1,27 @@
 {
-  "name": "game",
+  "name": "kinda-wordle",
   "version": "1.0.0",
-  "description": "Word Games",
-  "main": "script.js",
+  "description": "a word game kinda like wordle",
+  "main": "game.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NereidaRondon/Game.git"
+    "url": "git+https://github.com/NereidaRondon/Games.git"
   },
+  "keywords": [
+    "word",
+    "game"
+  ],
   "author": "Nereida Rondon",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/NereidaRondon/Game/issues"
+    "url": "https://github.com/NereidaRondon/Games/issues"
   },
-  "homepage": "https://github.com/NereidaRondon/Game#readme",
+  "homepage": "https://github.com/NereidaRondon/Games#readme",
   "dependencies": {
-    "bootstrap": "^5.1.3",
+    "bootstrap": "^5.2.0",
     "jquery": "^3.6.0"
   }
 }

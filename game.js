@@ -1,37 +1,33 @@
 
-// document.addEventListener('load',() => {
-//    newGame.start();
-// });
+let player = sessionStorage.getItem('playerName');
+    
 
-    //dark mode checkbox toggle
-// let toggle =document.getElementById("mode");
-
-// toggle.addEventListener('click', ()=>{
-//     document.body.classList.toggle('dark');
-// })
+const start = document.querySelector("#startBtn");
+const submit = document.querySelector("#submitBtn");
+const clear = document.querySelector("#clearBtn");
+const next = document.querySelector("#nextBtn");  
 
 // -------------------------------------
 
 // const wordBank=['abhor', 'above', 'acute', 'agent', 'alarm', 'alone', 'angle', 'arena', 'avoid', 'basic', 'beach', 'below', 'birth', 'block', 'brain', 'break', 'brief', 'build', 'cable', 'chart', 'check', 'class', 'clean', 'coast', 'coach', 'color', 'cough', 'crash', 'crime', 'curve', 'dance', 'debut', 'dodger', 'drama', 'dream', 'drive', 'eager', 'earth', 'eject', 'empty', 'equal', 'error', 'event', 'exact', 'exist', 'false', 'field', 'fight', 'final', 'flash', 'fleet', 'force', 'frame', 'front', 'fudge', 'funny', 'giant', 'glass', 'grace', 'grade', 'grant', 'grass', 'group', 'guest', 'guide', 'happy', 'haste', 'heart', 'heavy', 'house', 'human', 'image', 'index', 'input', 'jaded', 'joint', 'judge', 'karma', 'kayak', 'kiosk', 'label', 'laser', 'later', 'laugh', 'learn', 'leave', 'level', 'limit', 'logic', 'lucky', 'lunch', 'magic', 'match', 'media', 'model', 'money', 'month', 'motor', 'movie', 'music', 'never', 'night', 'noise', 'novel', 'ocean', 'order', 'other', 'paint', 'panic', 'paper', 'party', 'peace', 'phase', 'phone', 'pilot', 'plane', 'plant', 'point', 'power', 'prime', 'proud', 'prove', 'queen', 'quiet', 'radio', 'range', 'rapid', 'ratio', 'react', 'ready', 'rival', 'river', 'rough', 'round', 'route', 'royal', 'scope', 'score', 'shape', 'sheet', 'shift' , 'short', 'sight', 'skill', 'small', 'smart', 'smile', 'solid', 'sound', 'space', 'speak', 'sport', 'start', 'steam', 'stock', 'storm', 'story', 'study', 'style', 'super', 'sweet', 'table', 'taste', 'teach', 'teeth', 'theme', 'think', 'tight', 'title', 'topic', 'tough', 'tower', 'trust', 'under', 'union', 'urban', 'valid', 'vapid', 'venom', 'video', 'virus', 'visit', 'voice', 'waste', 'watch', 'water', 'wheel', 'where', 'whole', 'woman', 'world', 'worry', 'worth', 'write', 'wrong', 'yield', 'young', 'youth', 'zesty', 'zombi'];
 
-const wordBank=['night', 'sight', 'fight', 'right', 'tight', 'might', 'light', 'night', 'sight', 'fight', 'right', 'tight', 'might', 'light', 'night', 'sight','fight', 'right', 'sight', 'fight', 'right', 'tight', 'might', 'light', 'night', 'sight','fight', 'right', 'sight', 'fight', 'right', 'tight', 'might', 'light', 'night', 'sight','fight', 'right', 'sight', 'fight', 'right', 'tight', 'might', 'light', 'night', 'sight','fight', 'right', 'sight', 'fight', 'right', 'tight', 'might', 'light', 'night', 'sight','fight', 'right', 'sight', 'fight', 'right', 'tight', 'might', 'light', 'night', 'sight','fight', 'right', 'sight', 'fight', 'right', 'tight', 'might', 'light', 'night', 'sight','fight', 'right', 'sight', 'fight', 'right', 'tight', 'might', 'light', 'night', 'sight','fight', 'right', 'sight', 'fight', 'right', 'tight', 'might', 'light', 'night', 'sight','fight', 'right']
+const wordBank=['eight', 'saint', 'first', 'right', 'tight', 'might', 'light', 'night', 'sight', 'reign', 'right', 'tight', 'might', 'light', 'night', 'sight','reign', 'flirt', 'sight', 'fight', 'right', 'write', 'might', 'light', 'feast', 'sight','feast', 'right', 'reign', 'fight', 'flirt', 'tight', 'might', 'light', 'night', 'sight','fight', 'right', 'sight', 'fight', 'right', 'reign', 'might', 'light', 'night', 'sight','write', 'feast', 'sight', 'taint', 'reign', 'tight', 'might', 'light', 'night', 'sight','fight', 'right', 'sight', 'fight', 'right', 'tight', 'flirt', 'light', 'night', 'sight','fight', 'feast', 'sight', 'fight', 'right', 'tight', 'might', 'light', 'write', 'sight','flirt', 'right', 'sight', 'fight', 'feast', 'tight', 'write', 'flirt', 'night', 'feast','fight', 'right', 'reign', 'fight', 'right', 'taint', 'might', 'light', 'eight', 'sight','fight', 'right']
 
 
 let gameBank = [...wordBank];
 let gameList=[];
-// let round=1;
-// let points=0;
-// let chances=5;
+
 
 ////////////////////////////////////////////////////////////
-        //tabs over when you hit enter
-        function handleEnter(event) {
-            if (event.key==="Enter") {
-                const form = document.getElementById('form')
-                const index = [...form].indexOf(event.target);
-                form.elements[index + 1].focus();
-            }
-        }
+
+//tabs over when you hit enter
+function handleEnter(event) {
+    if (event.key==="Enter") {
+        const form = document.getElementById('form')
+        const index = [...form].indexOf(event.target);
+        form.elements[index + 1].focus();
+    }
+}
 
 //needs to be triggered by start game button ✔️
 class Game {
@@ -44,7 +40,6 @@ class Game {
         this.chances = 5;
     }
 
-
     start(){
        
         //update round to 1                            
@@ -53,17 +48,16 @@ class Game {
         //update score board
         newGame.scoreboard();
         
-
         document.getElementById('submitBtn').removeAttribute('disabled', '');
         document.getElementById('clearBtn').removeAttribute('disabled', '');
         
         let wordPicker=(list)=>{   //makes word list for game
                 
             for(let i=0; i<10; i++){
-                    let wordIndex = Math.floor(Math.random() * list.length);
-                    
-                    let newWord = list[wordIndex]; //picks a word
-                    gameList.push(newWord);  //adds word to an array
+                let wordIndex = Math.floor(Math.random() * list.length);
+                
+                let newWord = list[wordIndex]; //picks a word
+                gameList.push(newWord);  //adds word to an array
             }
             //DELETE LATER
              console.log(`Game word bank: ${gameList}`);         
@@ -74,8 +68,7 @@ class Game {
         }
             
         wordPicker(gameBank);
-        
-                        
+                     
         this.word = gameList[this.round-1];
         console.log(`This round's word: ${this.word}`); //word for round
     }  
@@ -294,26 +287,8 @@ class Game {
 }
 
     
-
-
 //////////////////////////////////////////////////////// 
-
-// Store Player Name
-// function savePlayer(){
-//         let player = document.getElementById('player').value;
-//         sessionStorage.setItem('playerName', player);
-//     }
        
-let player = sessionStorage.getItem('playerName');
-    
-console.log(player);
-// newGame.start();
-
-const start = document.querySelector("#startBtn");
-const submit = document.querySelector("#submitBtn");
-const clear = document.querySelector("#clearBtn");
-const next = document.querySelector("#nextBtn");  
-
 let newGame = new Game;
 
 document.addEventListener('DOMContentLoaded',() => {
