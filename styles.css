@@ -11,28 +11,6 @@ div.space {
   } 
 }
 
-/* div{
-  border: 2px solid red;
-} */
-
-.space-rules{
-  padding: 4rem;
-  margin: 3rem;
-  justify-content: space-around;
-  box-shadow: 5px 6px 10px rgb(33, 37, 41);
-}
-
-.space-hints{
-  padding: 2rem;
-  margin: 1rem;
-  justify-content: space-around;
-  box-shadow: 5px 6px 10px rgb(33, 37, 41);
-}
-
-.rules{
-  background: #e354ff;
-}
-
 
 body.bgDark{
   background-color: rgb(35, 37, 39);
@@ -100,12 +78,12 @@ body.bg{
 }
 
 
-
 /* --------FORM-------------------- */
 .form-bg{
-  /* background-color:rgb(255, 225, 105); */
+  background-color:rgb(255, 255, 255); 
   margin: 3rem auto;
   max-width: 500px;
+  box-shadow: 5px 6px 10px rgb(33, 37, 41);
 }
 
 .playgame{
@@ -123,11 +101,7 @@ body.bg{
   color:rgb(0, 0, 0);
 }
 
-/* background: linear-gradient(90deg, #ff5202, #ff3205, #fe1408, #fe0b20, #fe0e44, #fe1166, #fd1487, #fd17a7, #fd1ac7, #fd1de5, #f520fc, #d823fc); */
-
-
 /* ----------------------------------- */
-
 
 h1, h2, h4, p{
   text-align: center;
@@ -186,7 +160,7 @@ input.input {
   background: rgb(35, 37, 39);
 
 }
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 700px){
   input.input {
   width: 2rem;
   height: 2rem;
@@ -204,34 +178,27 @@ input.input {
   margin: auto;
   justify-content: center;
 }
-.letter{
-  padding:0;
-}
+
 .alpha{
   font-weight: bolder;
+  font-size: 25px;
 }
 
 .cont-indent{
-  border: 1px solid black;
   padding: 0rem;
   margin: 2rem auto;
-  
 }
 
 .indent1{
-   padding: 0 3rem;
-  border: 1px solid black;
+  padding: 0 2rem;
 }
 
 .indent2{
-  padding: 0 6rem;
-  border: 1px solid black;
+  padding: 0 4rem;
 }
 .indent3{
-  padding: 0 9rem;
-  border: 1px solid black;
+  padding: 0 6rem;
 }
-
 
 @media only screen and (max-width: 700px){
   
@@ -354,3 +321,35 @@ input.input {
 	background: linear-gradient(90deg, #ff5202, #ff302f, #ff006e, #ff0090, #fb00d9, #d823fc);
 }
 
+/* ------RULES------------ */
+.rules{
+  padding: 0;
+  margin: 2rem auto;
+}
+.space-rules{
+  padding: 1rem;
+  margin: 2rem;
+  justify-content: space-around;
+  box-shadow: 5px 6px 10px rgb(33, 37, 41);
+}
+
+.space-hints{
+  padding: 2rem;
+  margin: 1rem;
+  justify-content: space-around;
+  box-shadow: 5px 6px 10px rgb(33, 37, 41);
+}
+
+@media only screens and (max-width: 600px){
+  .space-rules{
+    padding: .5rem;
+    margin: 1rem;
+  
+  }
+
+.space-hints{
+    padding: 1rem;
+    margin: .5rem;
+  }
+
+}

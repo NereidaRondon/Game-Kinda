@@ -8,7 +8,7 @@
         
     <title>Kinda Wordle Player List</title>
     
-    <link rel="shortcut icon" type="image" href="images/favicon.png" />
+    <link rel="shortcut icon" type="image" href="images/favicon.webp" />
 
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"/>
@@ -17,7 +17,7 @@
 </head>
 <body class="bg">
 
-<!------------------NAV icon As a link ----------------->
+    <!------------------NAV icon As a link ----------------->
 
     <div>
         <nav class="navbar navbar-light">
@@ -26,8 +26,47 @@
     </div>
     <br>
  
-<!------------------------------------------------------>
+    <!-----------------COLLAPSEABLE NAVBAR------------------->
 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        
+        <div class="container-fluid">
+            
+            
+            <a class="navbar-brand" href="#">Menu</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                
+                <span class="navbar-toggler-icon"></span>
+            
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                
+                    <li class="nav-item">
+                    <a class="border-bot nav-link" href="index.html">Home</a>
+                    </li>
+                
+                    <li class="nav-item">
+                    <a class="border-bot nav-link" href="rules.html">Rules</a>
+                    </li>
+                
+                    <li class="nav-item">
+                    <a class="border-bot nav-link disabled" href="top10.html" tabindex="-1" aria-current="page" aria-disabled="true">Top 10</a>
+                    </li>
+
+                </ul>
+                
+        
+            </div>
+        </div>
+    </nav>
+     
+
+<!--------------------------------------------->
+<br>
 <div class="container table-container">
     
     <h1 class="table-label"><img src="images\top10.webp" width="150" height="50" alt="Top 10 Players list"></h1>
