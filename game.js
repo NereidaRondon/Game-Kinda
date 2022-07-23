@@ -166,13 +166,7 @@ class Game {
             document.getElementById('closeBtn').removeAttribute('hidden', '');
             newGame.scoreboard();
             // Triggers modal
-            
-            let myModal = new Modal(document.getElementById('endGame'));
-            
-            myModal.show();
-
-            document.querySelector('#player').innerHTML=`${player}`;
-
+            newGame.endGame();
 
         } else if (userWord === this.word){
                 
@@ -267,30 +261,25 @@ class Game {
 
      //triggered by NEXT ROUND button
     reset(){
-        // if(this.points===100){
-        //     newGame.altEndGame();
-        // } else{
 
-            document.getElementById('submitBtn').removeAttribute('disabled', '');
-            document.getElementById('clearBtn').removeAttribute('disabled', '');
-            document.getElementById('nextBtn').setAttribute('disabled', '');
-            
-            document.querySelector("#message").innerHTML='';
-            document.querySelector("#message").setAttribute('hidden', '');
-            
-            document.querySelector('#input1').value='';
-            document.querySelector('#input2').value='';
-            document.querySelector('#input3').value='';
-            document.querySelector('#input4').value='';
-            document.querySelector('#input5').value='';
-            
+        document.getElementById('submitBtn').removeAttribute('disabled', '');
+        document.getElementById('clearBtn').removeAttribute('disabled', '');
+        document.getElementById('nextBtn').setAttribute('disabled', '');
+        
+        document.querySelector("#message").innerHTML='';
+        document.querySelector("#message").setAttribute('hidden', '');
+        
+        document.querySelector('#input1').value='';
+        document.querySelector('#input2').value='';
+        document.querySelector('#input3').value='';
+        document.querySelector('#input4').value='';
+        document.querySelector('#input5').value='';
+        
 
-            this.round+=1;
-            this.chances=5;
-            //update score board
-            newGame.scoreboard();
-        // }    
-
+        this.round+=1;
+        this.chances=5;
+        //update score board
+        newGame.scoreboard();
 
         let alphabet=[...Array(26)].map((e, i) => String.fromCharCode(i + 65)); 
         
@@ -309,9 +298,15 @@ class Game {
 
   
     endGame(){
-        $("#endGame").modal(show);
+        $('#endGame').modal('show');
         document.querySelector('#player').innerHTML=`${player}`;
         
+        // let myModal = new Modal(document.getElementById('endGame'));
+
+        // myModal.show(); 
+
+        document.querySelector('#player').innerHTML=`${player}`;
+
         newGame.reset();
         this.round=0;
         this.points=0;
