@@ -5,11 +5,6 @@ const submit = document.querySelector("#submitBtn");
 const clear = document.querySelector("#clearBtn");
 const next = document.querySelector("#nextBtn");  
 
-let jump=(field, element)=>{
-    if (field.value.length >= field.maxLength){
-        document.getElementById(element).focus();
-    }
-};
 // -------------------------------------
 
 const wordBank=['abhor', 'above', 'acute', 'agent', 'alarm', 'alone', 'angle', 'arena', 'avoid', 'basic', 'beach', 'below', 'birth', 'block', 'brain', 'break', 'brief', 'build', 'cable', 'chart', 'check', 'class', 'clean', 'coast', 'coach', 'color', 'cough', 'crash', 'crime', 'curve', 'dance', 'debut', 'dodge', 'drama', 'dream', 'drive', 'eager', 'earth', 'eject', 'empty', 'equal', 'error', 'event', 'exact', 'exist', 'false', 'feast', 'field', 'fight', 'final', 'flash', 'fleet', 'force', 'frame', 'front', 'fudge', 'funny', 'giant', 'glass', 'grace', 'grade', 'grant', 'grass', 'group', 'guest', 'guide', 'happy', 'haste', 'heart', 'heavy', 'house', 'human', 'image', 'index', 'input', 'jaded', 'joint', 'judge', 'karma', 'kayak', 'kiosk', 'label', 'laser', 'later', 'laugh', 'learn', 'leave', 'level', 'limit', 'logic', 'lucky', 'lunch', 'magic', 'match', 'media', 'model', 'money', 'month', 'motor', 'movie', 'music', 'never', 'night', 'noise', 'novel', 'ocean', 'order', 'other', 'paint', 'panic', 'paper', 'party', 'peace', 'phase', 'phone', 'pilot', 'plane', 'plant', 'point', 'power', 'prime', 'proud', 'prove', 'queen', 'quiet', 'radio', 'range', 'rapid', 'ratio', 'react', 'ready', 'rival', 'river', 'rough', 'round', 'route', 'royal', 'scope', 'score', 'shape', 'sheet', 'shift' , 'short', 'sight', 'skill', 'small', 'smart', 'smile', 'solid', 'sound', 'space', 'speak', 'sport', 'start', 'steam', 'stock', 'storm', 'story', 'study', 'style', 'super', 'sweet', 'table', 'taste', 'teach', 'teeth', 'theme', 'think', 'tight', 'title', 'topic', 'tough', 'tower', 'trust', 'under', 'union', 'urban', 'valid', 'vapid', 'venom', 'video', 'virus', 'visit', 'voice', 'waste', 'watch', 'water', 'wheel', 'where', 'whole', 'woman', 'world', 'worry', 'worth', 'write', 'wrong', 'yield', 'young', 'youth', 'zesty'];
@@ -24,13 +19,59 @@ let gameList=[];
 ////////////////////////////////////////////////////////////
 
 //tabs over when you hit enter
+// function handleEnter(event) {
+//     if (event.key==="Enter") {
+//         const form = document.getElementById('form')
+//         const index = [...form].indexOf(event.target);
+//         form.elements[index + 1].focus();
+//     }
+// }
+let jump=(field, element)=>{
+    if (field.value.length >= field.maxLength){
+        document.getElementById(element).focus();
+    }
+};
+
+
+  $(document).ready(function(){
+    $('body').on('keyup', 'input.letter', function(e){
+      
+        var inputs = $('input.letter');
+
+        if(e.keyCode == 8){
+            var index = inputs.index(this);
+            if (index != 0)
+            inputs.eq(index-1).val('').focus();    
+        
+        }else{
+          
+            if($(this).val().length === this.size){
+              inputs.eq(inputs.index(this) + 1).focus();
+            }
+        }
+    });
+  });
+
+// let backBtn=()=>{ 
+
+// };
+
+//ENTER key submits word
 function handleEnter(event) {
     if (event.key==="Enter") {
-        const form = document.getElementById('form')
-        const index = [...form].indexOf(event.target);
-        form.elements[index + 1].focus();
+        newGame.submit();
     }
-}
+};
+
+//SPACEBAR clicks next round button
+document.addEventListener('keyup', event => {
+  if (event.code === 'Spacebar') {
+    event.preventDefault();
+    document.getElementById("nextBtn").click();
+  }  
+});
+
+
 
 //needs to be triggered by start game button ✔️
 class Game {
@@ -197,7 +238,7 @@ class Game {
                     if (i===letter.toLowerCase()){
                         document.getElementById(letter.toUpperCase()).style.backgroundColor = 'black';
                     }else{
-                        document.getElementById(letter.toUpperCase()).style.color='#fc5202';  
+                        document.getElementById(letter.toUpperCase()).style.color='#f79264';  
                     }
                 };
             };   

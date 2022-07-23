@@ -42,8 +42,7 @@ function savePlayer(){
     let player = document.getElementById('player').value;
     sessionStorage.setItem('playerName', player);
     console.log(sessionStorage.getItem('playerName'));
-    console.log(player);
-    
+        
     document.getElementById("playGame").style.display = "block";
     
     

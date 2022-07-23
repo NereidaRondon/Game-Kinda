@@ -173,12 +173,13 @@ input.input {
   display:flex;
   margin: auto;
   justify-content: center;
+ 
 }
 
 .alpha-box{
   background-color: #FF5202;
   margin: 5px;
-  padding: 3px;
+  padding: 10px 3px;
   border-radius: 5px;
 }
 .alpha-cont{
@@ -277,7 +278,7 @@ input.input {
 }
 
 .myBtn:hover{ 
-  filter:drop-shadow(2px 2px 4px rgba(44, 2, 30, 0.06));
+  filter:drop-shadow(2px 2px 4px rgba(139, 0, 93, 0.692));
 }
 
 
@@ -287,6 +288,12 @@ input.input {
 }
 #submitBtn{
   background-color: rgb(255, 95, 3); 
+  width: 100px;
+  margin: 1rem auto;
+  justify-content: center;
+  align-self: center;
+}
+#backBtn{
   width: 100px;
   margin: 1rem auto;
   justify-content: center;
