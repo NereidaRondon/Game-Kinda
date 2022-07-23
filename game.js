@@ -257,6 +257,10 @@ class Game {
 
      //triggered by NEXT ROUND button
     reset(){
+        if(this.round===11){
+            newGame.altEndGame();
+        } else{
+
         document.getElementById('submitBtn').removeAttribute('disabled', '');
         document.getElementById('clearBtn').removeAttribute('disabled', '');
         document.getElementById('nextBtn').setAttribute('disabled', '');
@@ -269,7 +273,7 @@ class Game {
         document.querySelector('#input3').value='';
         document.querySelector('#input4').value='';
         document.querySelector('#input5').value='';
-        
+        };
         this.round+=1;
         this.chances=5;
         //update score board
@@ -303,7 +307,28 @@ class Game {
         this.points=0;
         this.chances=5;
     }
+    //FALL BACK FOR MODAL NOT WORKING
+    altEndGame(){
+        alert(
+        `
+        Great Job! 🏆
+        You made it through all 10 rounds! 
+        
+        Thanks for playing!
+        
+        Close window tab to Exit. 
+        `);
 
+        newGame.reset();
+        this.round=0;
+        this.points=0;
+        this.chances=5;
+
+        document.getElementById('submitBtn').setAttribute('disabled', '');
+        document.getElementById('clearBtn').setAttribute('disabled', '');
+        document.getElementById('nextBtn').setAttribute('disabled', '');
+        
+    }
 
    scoreboard(){
         document.getElementById('round').innerHTML=`ROUND: ${this.round}`;
