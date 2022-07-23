@@ -166,8 +166,7 @@ class Game {
             document.getElementById('closeBtn').removeAttribute('hidden', '');
             newGame.scoreboard();
             // Triggers modal
-            $("#endGame").modal(show);
-
+            
             let myModal = new Modal(document.getElementById('endGame'));
             
             myModal.show();
