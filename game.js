@@ -262,28 +262,29 @@ class Game {
 
      //triggered by NEXT ROUND button
     reset(){
-        // if(this.points===100){
-        //     newGame.altEndGame();
-        // } else{
+        if(this.points===100){
+            newGame.altEndGame();
+        } else{
 
-        document.getElementById('submitBtn').removeAttribute('disabled', '');
-        document.getElementById('clearBtn').removeAttribute('disabled', '');
-        document.getElementById('nextBtn').setAttribute('disabled', '');
-        
-        document.querySelector("#message").innerHTML='';
-        document.querySelector("#message").setAttribute('hidden', '');
-        
-        document.querySelector('#input1').value='';
-        document.querySelector('#input2').value='';
-        document.querySelector('#input3').value='';
-        document.querySelector('#input4').value='';
-        document.querySelector('#input5').value='';
-        
-        this.round+=1;
-        this.chances=5;
-        //update score board
-        newGame.scoreboard();
+            document.getElementById('submitBtn').removeAttribute('disabled', '');
+            document.getElementById('clearBtn').removeAttribute('disabled', '');
+            document.getElementById('nextBtn').setAttribute('disabled', '');
+            
+            document.querySelector("#message").innerHTML='';
+            document.querySelector("#message").setAttribute('hidden', '');
+            
+            document.querySelector('#input1').value='';
+            document.querySelector('#input2').value='';
+            document.querySelector('#input3').value='';
+            document.querySelector('#input4').value='';
+            document.querySelector('#input5').value='';
+            
 
+            this.round+=1;
+            this.chances=5;
+            //update score board
+            newGame.scoreboard();
+        }    
         let alphabet=[...Array(26)].map((e, i) => String.fromCharCode(i + 65)); 
         
         for(let i=0; i<26;i++){
@@ -301,15 +302,15 @@ class Game {
 
   
     endGame(){
-        
+        $("#endGame").modal(show);
         document.querySelector('#player').innerHTML=`${player}`;
         
         newGame.reset();
         this.round=0;
         this.points=0;
         this.chances=5;
-        $("#endGame").modal(show);
     }
+    
     //FALL BACK FOR MODAL NOT WORKING
     altEndGame(){
         alert(
