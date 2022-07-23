@@ -262,9 +262,9 @@ class Game {
 
      //triggered by NEXT ROUND button
     reset(){
-        if(this.points===100){
-            newGame.altEndGame();
-        } else{
+        // if(this.points===100){
+        //     newGame.altEndGame();
+        // } else{
 
             document.getElementById('submitBtn').removeAttribute('disabled', '');
             document.getElementById('clearBtn').removeAttribute('disabled', '');
@@ -284,7 +284,9 @@ class Game {
             this.chances=5;
             //update score board
             newGame.scoreboard();
-        }    
+        // }    
+
+        
         let alphabet=[...Array(26)].map((e, i) => String.fromCharCode(i + 65)); 
         
         for(let i=0; i<26;i++){
@@ -310,7 +312,7 @@ class Game {
         this.points=0;
         this.chances=5;
     }
-    
+
     //FALL BACK FOR MODAL NOT WORKING
     altEndGame(){
         alert(

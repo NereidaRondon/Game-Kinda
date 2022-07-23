@@ -350,28 +350,32 @@ input.input {
 }
 .space-rules{
   padding: 1rem;
-  margin: 2rem;
+  margin: 1rem;
   justify-content: space-around;
+  max-width: 90%;
+  height:auto;
   box-shadow: 5px 6px 10px rgb(33, 37, 41);
 }
 
 .space-hints{
-  padding: 2rem;
+  padding: 1rem;
   margin: 1rem;
   justify-content: space-around;
+  max-width: 90%;
+  height:auto;
   box-shadow: 5px 6px 10px rgb(33, 37, 41);
 }
 
 @media only screens and (max-width: 600px){
   .space-rules{
     padding: .5rem;
-    margin: 1rem;
+    margin: 1rem .5rem;
   
   }
 
 .space-hints{
-    padding: 1rem;
-    margin: .5rem;
+    padding: .5rem;
+    margin: 1rem .5rem;
   }
 
 }
