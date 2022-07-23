@@ -257,7 +257,7 @@ class Game {
 
      //triggered by NEXT ROUND button
     reset(){
-        if(this.round===11){
+        if(this.points>100){
             newGame.altEndGame();
         } else{
 
