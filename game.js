@@ -12,7 +12,7 @@ let jump=(field, element)=>{
 };
 // -------------------------------------
 
-const wordBank=['abhor', 'above', 'acute', 'agent', 'alarm', 'alone', 'angle', 'arena', 'avoid', 'basic', 'beach', 'below', 'birth', 'block', 'brain', 'break', 'brief', 'build', 'cable', 'chart', 'check', 'class', 'clean', 'coast', 'coach', 'color', 'cough', 'crash', 'crime', 'curve', 'dance', 'debut', 'dodge', 'drama', 'dream', 'drive', 'eager', 'earth', 'eject', 'empty', 'equal', 'error', 'event', 'exact', 'exist', 'false', 'field', 'fight', 'final', 'flash', 'fleet', 'force', 'frame', 'front', 'fudge', 'funny', 'giant', 'glass', 'grace', 'grade', 'grant', 'grass', 'group', 'guest', 'guide', 'happy', 'haste', 'heart', 'heavy', 'house', 'human', 'image', 'index', 'input', 'jaded', 'joint', 'judge', 'karma', 'kayak', 'kiosk', 'label', 'laser', 'later', 'laugh', 'learn', 'leave', 'level', 'limit', 'logic', 'lucky', 'lunch', 'magic', 'match', 'media', 'model', 'money', 'month', 'motor', 'movie', 'music', 'never', 'night', 'noise', 'novel', 'ocean', 'order', 'other', 'paint', 'panic', 'paper', 'party', 'peace', 'phase', 'phone', 'pilot', 'plane', 'plant', 'point', 'power', 'prime', 'proud', 'prove', 'queen', 'quiet', 'radio', 'range', 'rapid', 'ratio', 'react', 'ready', 'rival', 'river', 'rough', 'round', 'route', 'royal', 'scope', 'score', 'shape', 'sheet', 'shift' , 'short', 'sight', 'skill', 'small', 'smart', 'smile', 'solid', 'sound', 'space', 'speak', 'sport', 'start', 'steam', 'stock', 'storm', 'story', 'study', 'style', 'super', 'sweet', 'table', 'taste', 'teach', 'teeth', 'theme', 'think', 'tight', 'title', 'topic', 'tough', 'tower', 'trust', 'under', 'union', 'urban', 'valid', 'vapid', 'venom', 'video', 'virus', 'visit', 'voice', 'waste', 'watch', 'water', 'wheel', 'where', 'whole', 'woman', 'world', 'worry', 'worth', 'write', 'wrong', 'yield', 'young', 'youth', 'zesty', 'zombi'];
+const wordBank=['abhor', 'above', 'acute', 'agent', 'alarm', 'alone', 'angle', 'arena', 'avoid', 'basic', 'beach', 'below', 'birth', 'block', 'brain', 'break', 'brief', 'build', 'cable', 'chart', 'check', 'class', 'clean', 'coast', 'coach', 'color', 'cough', 'crash', 'crime', 'curve', 'dance', 'debut', 'dodge', 'drama', 'dream', 'drive', 'eager', 'earth', 'eject', 'empty', 'equal', 'error', 'event', 'exact', 'exist', 'false', 'feast', 'field', 'fight', 'final', 'flash', 'fleet', 'force', 'frame', 'front', 'fudge', 'funny', 'giant', 'glass', 'grace', 'grade', 'grant', 'grass', 'group', 'guest', 'guide', 'happy', 'haste', 'heart', 'heavy', 'house', 'human', 'image', 'index', 'input', 'jaded', 'joint', 'judge', 'karma', 'kayak', 'kiosk', 'label', 'laser', 'later', 'laugh', 'learn', 'leave', 'level', 'limit', 'logic', 'lucky', 'lunch', 'magic', 'match', 'media', 'model', 'money', 'month', 'motor', 'movie', 'music', 'never', 'night', 'noise', 'novel', 'ocean', 'order', 'other', 'paint', 'panic', 'paper', 'party', 'peace', 'phase', 'phone', 'pilot', 'plane', 'plant', 'point', 'power', 'prime', 'proud', 'prove', 'queen', 'quiet', 'radio', 'range', 'rapid', 'ratio', 'react', 'ready', 'rival', 'river', 'rough', 'round', 'route', 'royal', 'scope', 'score', 'shape', 'sheet', 'shift' , 'short', 'sight', 'skill', 'small', 'smart', 'smile', 'solid', 'sound', 'space', 'speak', 'sport', 'start', 'steam', 'stock', 'storm', 'story', 'study', 'style', 'super', 'sweet', 'table', 'taste', 'teach', 'teeth', 'theme', 'think', 'tight', 'title', 'topic', 'tough', 'tower', 'trust', 'under', 'union', 'urban', 'valid', 'vapid', 'venom', 'video', 'virus', 'visit', 'voice', 'waste', 'watch', 'water', 'wheel', 'where', 'whole', 'woman', 'world', 'worry', 'worth', 'write', 'wrong', 'yield', 'young', 'youth', 'zesty'];
 
 // const wordBank=['eight', 'saint', 'first', 'right', 'tight', 'might', 'light', 'night', 'sight', 'reign', 'right', 'tight', 'might', 'light', 'night', 'sight','reign', 'flirt', 'sight', 'fight', 'right', 'write', 'might', 'light', 'feast', 'sight','feast', 'right', 'reign', 'fight', 'flirt', 'tight', 'might', 'light', 'night', 'sight','fight', 'right', 'sight', 'fight', 'right', 'reign', 'might', 'light', 'night', 'sight','write', 'feast', 'sight', 'taint', 'reign', 'tight', 'might', 'light', 'night', 'sight','fight', 'right', 'sight', 'fight', 'right', 'tight', 'flirt', 'light', 'night', 'sight','fight', 'feast', 'sight', 'fight', 'right', 'tight', 'might', 'light', 'write', 'sight','flirt', 'right', 'sight', 'fight', 'feast', 'tight', 'write', 'flirt', 'night', 'feast','fight', 'right', 'reign', 'fight', 'right', 'taint', 'might', 'light', 'eight', 'sight','fight', 'right']
 
@@ -153,12 +153,15 @@ class Game {
             console.log(`new points: ${this.points}`);
 
             document.querySelector("#message").removeAttribute('hidden', '');
-            document.getElementById("message").innerHTML="✔️ That's correct ✔️";
+            document.getElementById("message").innerHTML=`
+            ✔️ That's correct ✔️
+                 GAME OVER 🏆
+            `;
             //disable or enable buttons as needed
             document.getElementById('submitBtn').setAttribute('disabled', '');
             document.getElementById('clearBtn').setAttribute('disabled', '');
             //enable the next round button
-            document.getElementById('nextBtn').removeAttribute('disabled', '');
+            document.getElementById('nextBtn').setAttribute('disabled', '');
             //enable close window button
             document.getElementById('closeBtn').removeAttribute('hidden', '');
             newGame.scoreboard();
@@ -298,14 +301,14 @@ class Game {
 
   
     endGame(){
-        $('#endGame').modal('show');
-
+        
         document.querySelector('#player').innerHTML=`${player}`;
-
+        
         newGame.reset();
         this.round=0;
         this.points=0;
         this.chances=5;
+        $("#endGame").modal(show);
     }
     //FALL BACK FOR MODAL NOT WORKING
     altEndGame(){
