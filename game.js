@@ -161,6 +161,7 @@ class Game {
             document.getElementById('nextBtn').removeAttribute('disabled', '');
             //enable close window button
             document.getElementById('closeBtn').removeAttribute('hidden', '');
+            newGame.scoreboard();
             // Triggers modal and resets game
             newGame.endGame();
 
@@ -178,6 +179,7 @@ class Game {
             //enable next round button
             document.getElementById('nextBtn').removeAttribute('disabled', '');
 
+            newGame.scoreboard();
 
         } else if(userWord !== this.word && this.chances>0) {
             //take guesses variable and subtract one 
@@ -257,9 +259,9 @@ class Game {
 
      //triggered by NEXT ROUND button
     reset(){
-        if(this.round>11){
-            newGame.altEndGame();
-        } else{
+        // if(this.points===100){
+        //     newGame.altEndGame();
+        // } else{
 
         document.getElementById('submitBtn').removeAttribute('disabled', '');
         document.getElementById('clearBtn').removeAttribute('disabled', '');
@@ -273,7 +275,7 @@ class Game {
         document.querySelector('#input3').value='';
         document.querySelector('#input4').value='';
         document.querySelector('#input5').value='';
-        };
+        
         this.round+=1;
         this.chances=5;
         //update score board
