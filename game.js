@@ -165,8 +165,14 @@ class Game {
             //enable close window button
             document.getElementById('closeBtn').removeAttribute('hidden', '');
             newGame.scoreboard();
-            // Triggers modal and resets game
-            newGame.endGame();
+            // Triggers modal
+            $("#endGame").modal(show);
+
+            let myModal = new Modal(document.getElementById('endGame'));
+            
+            myModal.show();
+
+            document.querySelector('#player').innerHTML=`${player}`;
 
 
         } else if (userWord === this.word){
@@ -286,7 +292,7 @@ class Game {
             newGame.scoreboard();
         // }    
 
-        
+
         let alphabet=[...Array(26)].map((e, i) => String.fromCharCode(i + 65)); 
         
         for(let i=0; i<26;i++){
