@@ -1,9 +1,9 @@
 let player = sessionStorage.getItem('playerName');
     
 const start = document.querySelector("#startBtn");
-const submit = document.querySelector("#submitBtn");
-const clear = document.querySelector("#clearBtn");
+const submit = document.querySelector("#enterBtn");
 const next = document.querySelector("#nextBtn");  
+// const clear = document.querySelector("#clearBtn");
 
 // -------------------------------------
 
@@ -11,21 +11,21 @@ const wordBank=['abhor', 'above', 'acute', 'agent', 'alarm', 'alone', 'angle', '
 
 // const wordBank=['eight', 'saint', 'first', 'right', 'tight', 'might', 'light', 'night', 'sight', 'reign', 'right', 'tight', 'might', 'light', 'night', 'sight','reign', 'flirt', 'sight', 'fight', 'right', 'write', 'might', 'light', 'feast', 'sight','feast', 'right', 'reign', 'fight', 'flirt', 'tight', 'might', 'light', 'night', 'sight','fight', 'right', 'sight', 'fight', 'right', 'reign', 'might', 'light', 'night', 'sight','write', 'feast', 'sight', 'taint', 'reign', 'tight', 'might', 'light', 'night', 'sight','fight', 'right', 'sight', 'fight', 'right', 'tight', 'flirt', 'light', 'night', 'sight','fight', 'feast', 'sight', 'fight', 'right', 'tight', 'might', 'light', 'write', 'sight','flirt', 'right', 'sight', 'fight', 'feast', 'tight', 'write', 'flirt', 'night', 'feast','fight', 'right', 'reign', 'fight', 'right', 'taint', 'might', 'light', 'eight', 'sight','fight', 'right']
 
-
-let gameBank = [...wordBank];
-let gameList=[];
-
-
 ////////////////////////////////////////////////////////////
 
 //tabs over when you hit enter
 // function handleEnter(event) {
-//     if (event.key==="Enter") {
-//         const form = document.getElementById('form')
-//         const index = [...form].indexOf(event.target);
-//         form.elements[index + 1].focus();
-//     }
-// }
+    //     if (event.key==="Enter") {
+        //         const form = document.getElementById('form')
+        //         const index = [...form].indexOf(event.target);
+        //         form.elements[index + 1].focus();
+        //     }
+        // }
+        
+        
+let gameBank = [...wordBank];
+let gameList=[];
+
 let jump=(field, element)=>{
     if (field.value.length >= field.maxLength){
         document.getElementById(element).focus();
@@ -33,28 +33,25 @@ let jump=(field, element)=>{
 };
 
 
-  $(document).ready(function(){
-    $('body').on('keyup', 'input.letter', function(e){
-      
-        var inputs = $('input.letter');
+$(document).ready(function(){
+$('body').on('keyup', 'input.letter', function(e){
+    
+    var inputs = $('input.letter');
 
-        if(e.keyCode == 8){
-            var index = inputs.index(this);
-            if (index != 0)
-            inputs.eq(index-1).val('').focus();    
+    if(e.keyCode == 8){
+        var index = inputs.index(this);
+        if (index != 0)
+        inputs.eq(index-1).val('').focus();    
+    
+    }else{
         
-        }else{
-          
-            if($(this).val().length === this.size){
-              inputs.eq(inputs.index(this) + 1).focus();
-            }
+        if($(this).val().length === this.size){
+            inputs.eq(inputs.index(this) + 1).focus();
         }
-    });
-  });
+    }
+});
+});
 
-// let backBtn=()=>{ 
-
-// };
 
 //ENTER key submits word
 function handleEnter(event) {
@@ -65,13 +62,11 @@ function handleEnter(event) {
 
 //SPACEBAR clicks next round button
 document.addEventListener('keyup', event => {
-  if (event.code === 'Spacebar') {
+  if (event.code === 'Space') {
     event.preventDefault();
     document.getElementById("nextBtn").click();
   }  
 });
-
-
 
 //needs to be triggered by start game button ✔️
 class Game {
@@ -92,8 +87,8 @@ class Game {
         //update score board
         newGame.scoreboard();
         
-        document.getElementById('submitBtn').removeAttribute('disabled', '');
-        document.getElementById('clearBtn').removeAttribute('disabled', '');
+        document.getElementById('enterBtn').removeAttribute('disabled', '');
+        // document.getElementById('clearBtn').removeAttribute('disabled', '');
         
         let wordPicker=(list)=>{   //makes word list for game
                 
@@ -118,12 +113,12 @@ class Game {
     }  
     
     submit(){
-        //triggered by submit button
+        //triggered by enter button
         this.word = gameList[this.round-1];
         console.log(`This round's word: ${this.word}`); //word for round
 
         document.querySelector('#greeting').setAttribute('hidden', '');
-        
+
         let one=document.getElementById("input1").value;
         let two=document.getElementById("input2").value;
         let three=document.getElementById("input3").value;
@@ -146,47 +141,47 @@ class Game {
             
             alert('Please fill in each box and try again');
             
-            document.getElementById('submitBtn').removeAttribute('disabled', '');
-            document.getElementById('clearBtn').removeAttribute('disabled', '');
+            document.getElementById('enterBtn').removeAttribute('disabled', '');
+            // document.getElementById('clearBtn').removeAttribute('disabled', '');
 
         } else if (document.querySelector(".two").value == ""){            
             
             alert('Please fill in each box and try again');
             
-            document.getElementById('submitBtn').removeAttribute('disabled', '');
-            document.getElementById('clearBtn').removeAttribute('disabled', '');            
+            document.getElementById('enterBtn').removeAttribute('disabled', '');
+            // document.getElementById('clearBtn').removeAttribute('disabled', '');            
         
         
         } else if (document.querySelector(".three").value == ""){            
             
             alert('Please fill in each box and try again');
             
-            document.getElementById('submitBtn').removeAttribute('disabled', '');
-            document.getElementById('clearBtn').removeAttribute('disabled', '');            
+            document.getElementById('enterBtn').removeAttribute('disabled', '');
+            // document.getElementById('clearBtn').removeAttribute('disabled', '');            
             
         
         } else if (document.querySelector(".four").value == ""){            
             
             alert('Please fill in each box and try again');
             
-            document.getElementById('submitBtn').removeAttribute('disabled', '');
-            document.getElementById('clearBtn').removeAttribute('disabled', '');            
+            document.getElementById('enterBtn').removeAttribute('disabled', '');
+            // document.getElementById('clearBtn').removeAttribute('disabled', '');            
         
         
         } else if (document.querySelector(".five").value == ""){            
             
             alert('Please fill in each box and try again');
             
-            document.getElementById('submitBtn').removeAttribute('disabled', '');
-            document.getElementById('clearBtn').removeAttribute('disabled', '');            
+            document.getElementById('enterBtn').removeAttribute('disabled', '');
+            // document.getElementById('clearBtn').removeAttribute('disabled', '');            
 
         
         } else if (containsNumber(userWord)){
 
             alert('Not a word, please try again');
             
-            document.getElementById('submitBtn').removeAttribute('disabled', '');
-            document.getElementById('clearBtn').removeAttribute('disabled', '');
+            document.getElementById('enterBtn').removeAttribute('disabled', '');
+            // document.getElementById('clearBtn').removeAttribute('disabled', '');
                 
         } else if (userWord === this.word && this.round===10){
                 
@@ -194,13 +189,17 @@ class Game {
             console.log(`new points: ${this.points}`);
 
             document.querySelector("#message").removeAttribute('hidden', '');
-            document.getElementById("message").innerHTML=`
-            ✔️ That's correct ✔️
-                 GAME OVER 🏆
-            `;
+            document.getElementById("message").innerHTML=
+            `✔️That's correct✔️`;
+
+            let trophyAlert=()=>{
+                document.getElementById("message").innerHTML=`Game complete!🏆`;
+            };
+            setTimeout(trophyAlert, 2000);
+
             //disable or enable buttons as needed
-            document.getElementById('submitBtn').setAttribute('disabled', '');
-            document.getElementById('clearBtn').setAttribute('disabled', '');
+            document.getElementById('enterBtn').setAttribute('disabled', '');
+            // document.getElementById('clearBtn').setAttribute('disabled', '');
             //enable the next round button
             document.getElementById('nextBtn').setAttribute('disabled', '');
             //enable close window button
@@ -217,8 +216,8 @@ class Game {
             document.querySelector("#message").removeAttribute('hidden', '');
             document.getElementById("message").innerHTML="✔️ That's correct ✔️";
             //disable or enable buttons as needed
-            document.getElementById('submitBtn').setAttribute('disabled', '');
-            document.getElementById('clearBtn').setAttribute('disabled', '');
+            document.getElementById('enterBtn').setAttribute('disabled', '');
+            // document.getElementById('clearBtn').setAttribute('disabled', '');
             //enable next round button
             document.getElementById('nextBtn').removeAttribute('disabled', '');
 
@@ -229,9 +228,14 @@ class Game {
             this.chances--;
 
             document.querySelector("#message").removeAttribute('hidden', '');
-            document.getElementById("message").innerHTML="❌ Try again! ❌";
+            document.getElementById("message").innerHTML="❌Try again!❌";
             //nextBtn should already be disabled by default           
            
+            let eraseAlert=()=>{
+                document.querySelector("#message").setAttribute('hidden', '');
+            };
+            setTimeout(eraseAlert, 3000);
+
             let anyMatch=(letter, word)=>{
                 
                 for(var i of word){
@@ -270,15 +274,16 @@ class Game {
         } else if(this.chances===0){
             //Words don't match and out of guesses
             document.querySelector("#message").removeAttribute('hidden', '');
-            document.getElementById("message").innerHTML=
-                `
-                That's incorrect!
-                ❌ Game Over ❌
-                `;
+            document.getElementById("message").innerHTML=`❌Game Over❌`;
+
+            let revealWordAlert=()=>{
+                document.getElementById("message").innerHTML=`❓The secret word was "${this.word}".`;
+            };
+            setTimeout(revealWordAlert, 2000);
 
             //disables all buttons
-            document.getElementById('submitBtn').setAttribute('disabled', '');
-            document.getElementById('clearBtn').setAttribute('disabled', '');
+            document.getElementById('enterBtn').setAttribute('disabled', '');
+            // document.getElementById('clearBtn').setAttribute('disabled', '');
             document.getElementById('closeBtn').removeAttribute('hidden', '');
 
         };
@@ -303,8 +308,8 @@ class Game {
      //triggered by NEXT ROUND button
     reset(){
 
-        document.getElementById('submitBtn').removeAttribute('disabled', '');
-        document.getElementById('clearBtn').removeAttribute('disabled', '');
+        document.getElementById('enterBtn').removeAttribute('disabled', '');
+        // document.getElementById('clearBtn').removeAttribute('disabled', '');
         document.getElementById('nextBtn').setAttribute('disabled', '');
         
         document.querySelector("#message").innerHTML='';
@@ -327,14 +332,17 @@ class Game {
         for(let i=0; i<26;i++){
             let letter=(id)=>{
                 document.getElementById(id).style.color='#212529'
-                document.getElementById(id).style.backgroundColor='#fc5202';
+                document.getElementById(id).style.backgroundColor='';
             };
             letter(alphabet[i]);
         };
         console.log(`keyboard is reset`);
         
         let nextWord = this.round - 1;
-        console.log(`The next word: ${gameList[nextWord]}`)
+        console.log(`The next word: ${gameList[nextWord]}`);
+
+        let focusInput=(id)=>document.getElementById(id).focus();
+        focusInput("input1");   
     }
 
   
@@ -371,8 +379,8 @@ class Game {
         this.points=0;
         this.chances=5;
 
-        document.getElementById('submitBtn').setAttribute('disabled', '');
-        document.getElementById('clearBtn').setAttribute('disabled', '');
+        document.getElementById('enterBtn').setAttribute('disabled', '');
+        // document.getElementById('clearBtn').setAttribute('disabled', '');
         document.getElementById('nextBtn').setAttribute('disabled', '');
         
     }

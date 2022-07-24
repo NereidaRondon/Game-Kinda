@@ -14,12 +14,12 @@ div.space {
 
 body.bgDark{
   background-color: rgb(35, 37, 39);
-  font-family: 'Century Gothic', monospace ,sans-serif;
+  font-family: 'Century Gothic', CenturyGothic, Geneva,'Monaco monospace', monospace ,sans-serif;
 }
 
 body.bg{
   background-color: rgb(190, 190, 190);
-  font-family: 'Century Gothic', monospace ,sans-serif;
+  font-family: 'Century Gothic', CenturyGothic, Geneva,'Monaco monospace',  monospace ,sans-serif;
   color:black;
 }
 
@@ -73,7 +73,7 @@ body.bg{
 
 .logo-center{
   display: flex;
-  margin: 2rem auto;
+  margin: 1rem auto;
 
 }
 
@@ -89,7 +89,7 @@ body.bg{
 .playgame{
   padding: 3rem;
   margin:0;
-  background: linear-gradient(90deg, #ff8a54, #ff7151, #ff5a51, #ff3e4e, #ff3e68, #ff4187, #ff43a1, #ff46bb, #ff49d4, #ff4ded, #f94fff, #e354ff);;
+  background: linear-gradient(180deg, #ff8b42, #ff7451, #ff5969, #ff3b87, #ff1fac, #ff22d5);
 }
 
 .greet-player{
@@ -128,7 +128,7 @@ footer{
   max-width: 90%;
   border-width: 30px;
   border-style: solid;
-  border-image: linear-gradient(to right, rgb(255, 82, 2), rgb(216, 35, 252))1;
+  border-image: linear-gradient(to right, rgb(255, 82, 2), rgb(178, 25, 209))1;
 }
 @media only screen and (max-width: 500px){
   .container-decor{
@@ -177,44 +177,49 @@ input.input {
 }
 
 .alpha-box{
-  background-color: #FF5202;
-  margin: 5px;
-  padding: 10px 3px;
-  border-radius: 5px;
+  margin: 5px auto;
+  padding: 3px 0;
+  border-radius: 35px;
+  /* border: 1px solid red; */
+  max-width: 50px;
+  
 }
 .alpha-cont{
-  margin: 2rem auto;
+  
+  margin: 1rem auto;
   font-weight: bolder;
   font-size: 25px;
 }
 .indent1{
-  padding: 1rem 2rem;
+  padding: 0rem 2rem;
 }
 .indent2{
-  padding: 1rem 4rem;
+  padding: 0rem 4rem;
 }
 .indent3{
-  padding: 1rem 6rem;
+  padding: 0rem 7rem;
 }
 
 @media only screen and (max-width: 800px){
   
   .alpha-box{
-    margin: 3px;
-    border-radius: 3px;
+    margin: 5px auto;
+    /* border: 1px solid red; */
+    border-radius:30px;
+    max-width: 35px;
   }
   .alpha-cont{
     font-size: 16px;
   }
   .indent1{
-    padding: .5rem .5rem; 
+    padding: 0rem .5rem; 
   }
 
   .indent2{
-    padding: .5rem 1rem;
+    padding: 0rem 1.5rem;
   }
   .indent3{
-    padding: .5rem 1.5rem;
+    padding: 0rem 3.2rem;
   }
 
 }
@@ -222,22 +227,24 @@ input.input {
 @media only screen and (max-width: 600px){
   
   .alpha-box{
-    margin: 2px 1px;
-    border-radius: 2px;
+    margin: 5px auto;
+    /* border: 1px solid red; */
+    max-width: 27px;
   }
   .alpha-cont{
-    padding: 4px 0;
+    padding: 0;
+    margin:0;
     font-size: 12px;
   }
   .indent1{
-    padding: .5rem 0; 
+    padding: 0; 
   }
 
   .indent2{
-    padding:.5rem  0 .5rem;
+    padding: 0rem .5rem;
   }
   .indent3{
-    padding: .5rem 1.2rem;
+    padding: 0rem 1.85rem;
   }
 
 }
@@ -245,7 +252,7 @@ input.input {
 
 /* -------------SCOREBOARD-------------- */
 .scrbrd-box {
-  margin: 2rem auto;
+  margin: 1rem auto;
   padding: .5rem 2rem;
   justify-content: center;
   align-self: center;
@@ -254,7 +261,7 @@ input.input {
 
 .stat{
   padding: .5rem 1rem;
-  font-family: 'Century Gothic', monospace ,sans-serif;
+  font-family: 'Century Gothic', CenturyGothic, Geneva,'Monaco monospace', monospace ,sans-serif;
   font-weight: bolder;
   color:white;
   text-transform: uppercase;
@@ -269,10 +276,10 @@ input.input {
 .myBtn{
   display:flex;
   justify-content: center;
-  margin: 2rem auto;
+  margin: 1rem auto;
   padding: .5rem 1rem;
   font-size: large;
-  font-family: 'Century Gothic', monospace ,sans-serif;
+  font-family: 'Century Gothic', CenturyGothic, Geneva,'Monaco monospace', monospace ,sans-serif;
   border: 1px solid black;
   transition: 200ms ease-in-out;
 }
@@ -286,8 +293,8 @@ input.input {
   width: 150px;
   text-align: center;
 }
-#submitBtn{
-  background-color: rgb(255, 95, 3); 
+#enterBtn{
+  background-color: rgb(216, 53, 106); 
   width: 100px;
   margin: 1rem auto;
   justify-content: center;
@@ -304,9 +311,13 @@ input.input {
   margin: 1rem auto;
 }
 #nextBtn{
-  background-color: rgb(229, 50, 170);
+  background-color: rgb(178, 25, 209);
   width: 150px;
-  margin: 1 rem auto;
+  margin: auto;
+  margin-bottom:0;
+}
+.bot-space{
+  margin-bottom: 2rem;
 }
 .btn-close{
   font-size: 30px;
@@ -314,13 +325,12 @@ input.input {
   transition: 100ms ease-in-out ;
 }
 .btn-close:hover{
-  box-shadow: .4px .4px 5px 5px  rgb(255, 0, 85);
+  box-shadow: 4px 4px 3px rgb(63, 1, 22);
   /* filter:drop-shadow(3px 2px 1px rgb(255, 0, 85)); */
 }
 .alert{
   margin: auto;
   width: auto;
-  height: 4rem;
   font-weight: bold;
   text-align: center;
   border: none;
@@ -337,7 +347,7 @@ input.input {
 .table-container{
 	margin: auto;
   max-width: 900px;
-  font-family: 'Century Gothic', sans-serif;
+  font-family: 'Century Gothic', CenturyGothic, Geneva,'Monaco monospace', monospace ,sans-serif;
 	justify-content: center;
 	background-color: rgb(255, 225, 105);
 }
