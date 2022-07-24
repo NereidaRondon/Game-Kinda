@@ -18,7 +18,7 @@ body.bgDark{
 }
 
 body.bg{
-  background-color: rgb(190, 190, 190);
+  background-color: rgb(177, 177, 177);
   font-family: 'Century Gothic', CenturyGothic, Geneva,'Monaco monospace',  monospace ,sans-serif;
   color:black;
 }
@@ -89,7 +89,7 @@ body.bg{
 .playgame{
   padding: 3rem;
   margin:0;
-  background: linear-gradient(180deg, #ff8b42, #ff7451, #ff5969, #ff3b87, #ff1fac, #ff22d5);
+  background: linear-gradient(135deg, #ff8b42, #ff613d, #ff373a, #ff325d, #ff2d83, #ff27ab, #ff22d5);
 }
 
 .greet-player{
@@ -110,7 +110,7 @@ h1, h2, h4, p{
 }
 footer{
   /* color:rgb(255, 172, 199); */
-  color:rgb(238, 15, 127);
+  color:rgb(200, 0, 100);
   margin-top: 5rem;
 }
 .footer-space{
@@ -349,7 +349,8 @@ input.input {
   max-width: 900px;
   font-family: 'Century Gothic', CenturyGothic, Geneva,'Monaco monospace', monospace ,sans-serif;
 	justify-content: center;
-	background-color: rgb(255, 225, 105);
+	background-color: rgb(177, 177, 177);
+
 }
 
 
