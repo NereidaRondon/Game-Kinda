@@ -11,7 +11,6 @@ div.space {
   } 
 }
 
-
 body.bgDark{
   background-color: rgb(35, 37, 39);
   font-family: 'Century Gothic', CenturyGothic, Geneva,'Monaco monospace', monospace ,sans-serif;
@@ -26,7 +25,6 @@ body.bg{
 .link-design{
   text-decoration: none;
 }
-
 
 /* -------------NAVS--------------- */
 .link-style:hover{
@@ -57,7 +55,6 @@ body.bg{
   padding: 1rem;
 }
 
-
 /* border-bottom-width HAS to go under border-bottom */
 .border-bot{
   display: inline-block;
@@ -74,9 +71,7 @@ body.bg{
 .logo-center{
   display: flex;
   margin: 1rem auto;
-
 }
-
 
 /* --------FORM-------------------- */
 .form-bg{
@@ -100,7 +95,6 @@ body.bg{
   margin-top: 2rem;
   color:rgb(0, 0, 0);
 }
-
 /* ----------------------------------- */
 
 h1, h2, h4, p{
@@ -111,15 +105,13 @@ h1, h2, h4, p{
 footer{
   /* color:rgb(255, 172, 199); */
   color:rgb(200, 0, 100);
-  margin-top: 5rem;
+  margin-top: 8rem;
 }
 .footer-space{
   padding: 0 2rem;
   margin: 0 auto;
 }
-
 /* ------------GAME-------------- */
-
 
 .container-decor{
   background-color: rgb(170, 170, 170);
@@ -147,7 +139,6 @@ footer{
   color:rgb(255, 255, 255);
 }
 
-
 input.input {
   margin: 1rem auto;
   width: 3rem;
@@ -158,7 +149,6 @@ input.input {
   font-weight: bolder;
   text-align: center;
   background: rgb(35, 37, 39);
-
 }
 @media only screen and (max-width: 700px){
   input.input {
@@ -166,7 +156,6 @@ input.input {
   height: 2.25rem;
   font-size: 20px;
   }
-
 }
 
 .guess-box{
@@ -182,7 +171,6 @@ input.input {
   border-radius: 35px;
   /* border: 1px solid red; */
   max-width: 50px;
-  
 }
 .alpha-cont{
   
@@ -221,7 +209,6 @@ input.input {
   .indent3{
     padding: 0rem 3.2rem;
   }
-
 }
 
 @media only screen and (max-width: 600px){
@@ -246,9 +233,7 @@ input.input {
   .indent3{
     padding: 0rem 1.85rem;
   }
-
 }
-
 
 /* -------------SCOREBOARD-------------- */
 .scrbrd-box {
@@ -256,7 +241,6 @@ input.input {
   padding: .5rem 2rem;
   justify-content: center;
   align-self: center;
-
 }
 
 .stat{
@@ -267,10 +251,7 @@ input.input {
   text-transform: uppercase;
   text-align: center;
   background-color: rgb(35, 37, 39);
-  
 }
-
-
 
 /* -------------BUTTONS-------------- */
 .myBtn{
@@ -287,7 +268,6 @@ input.input {
 .myBtn:hover{ 
   filter:drop-shadow(2px 2px 4px rgba(139, 0, 93, 0.692));
 }
-
 
 #startBtn{
   width: 150px;
@@ -333,14 +313,12 @@ input.input {
   width: auto;
   font-weight: bold;
   text-align: center;
-  border: none;
-  
+  border: none; 
 }
 
 .alert-container{
   height: 4rem;
 }
-
 
 /* ---------------TABLE----------------- */
 
@@ -350,9 +328,7 @@ input.input {
   font-family: 'Century Gothic', CenturyGothic, Geneva,'Monaco monospace', monospace ,sans-serif;
 	justify-content: center;
 	background-color: rgb(177, 177, 177);
-
 }
-
 
 .table-label{
 	text-align: center;
@@ -374,7 +350,6 @@ input.input {
   height:auto;
   box-shadow: 5px 6px 10px rgb(33, 37, 41);
 }
-
 .space-hints{
   padding: 1rem;
   margin: 1rem;
@@ -383,17 +358,13 @@ input.input {
   height:auto;
   box-shadow: 5px 6px 10px rgb(33, 37, 41);
 }
-
 @media only screens and (max-width: 600px){
   .space-rules{
     padding: .5rem;
     margin: 1rem .5rem;
-  
   }
-
 .space-hints{
     padding: .5rem;
     margin: 1rem .5rem;
   }
-
 }
