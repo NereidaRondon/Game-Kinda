@@ -18,25 +18,38 @@ let jump=(field, element)=>{
     }
 };
 
-
-$(document).ready(function(){
-    $('body').on('keyup', 'input.letter', function(e){
+//this function stopped working for some reason
+// $(document).ready(function(){
+//     $('body').on('keyup', 'input.letter', function(e){
     
-        let inputs = $('input.letter');
+//         let inputs = $('input.letter');
 
-        if(e.keyCode == 8){
-            let index = inputs.index(this);
-            if (index != 0)
-            inputs.eq(index-1).val('').focus();    
+//         if(e.keyCode == 8){
+//             let index = inputs.index(this);
+//             if (index != 0)
+//             inputs.eq(index-1).val('').focus();    
         
-        }else{
-            if($(this).val().length === this.size){
-                inputs.eq(inputs.index(this) + 1).focus();
-            }
-        }
-    });
-});
-
+//         }else{
+//             if($(this).val().length === this.size){
+//                 inputs.eq(inputs.index(this) + 1).focus();
+//             }
+//         }
+//     });
+// });
+// let body = document.getElementById('body');
+// body.addEventListener('keydown', function(event) {
+//     const key = event.key;
+//     let inputs = document.getElementById('input.letter'); 
+//     if (key === "Backspace") {
+//         let index = inputs.index(this);
+//         if (index != 0)
+//         inputs.eq(index-1).val('').focus();
+//     } else{
+//         if(this.value().length === this.size){
+//             inputs.eq(inputs.index(this) + 1).focus();
+//         }
+//     };
+// });
 
 //ENTER key submits word
 function handleEnter(event) {
